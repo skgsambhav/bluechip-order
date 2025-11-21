@@ -2,6 +2,7 @@
   {
     "code": "BC001",
     "name": "BLUECHIP 6ML (VESLINE)",
+    "pp": 2.97,
     "priceBulk": 3.12,
     "priceWholesale": 3.18,
     "priceRetail": 3.267,
@@ -11,6 +12,7 @@
   {
     "code": "BC002",
     "name": "BLUECHIP 12ML (VESLINE)",
+    "pp": 5.95,
     "priceBulk": 6.25,
     "priceWholesale": 6.36,
     "priceRetail": 6.545,
@@ -20,6 +22,7 @@
   {
     "code": "BC003",
     "name": "BLUECHIP 20ML (VESLINE)",
+    "pp": 7.42,
     "priceBulk": 7.79,
     "priceWholesale": 7.94,
     "priceRetail": 8.162,
@@ -29,6 +32,7 @@
   {
     "code": "BC004",
     "name": "BLUECHIP 30ML (VESLINE)",
+    "pp": 11.97,
     "priceBulk": 12.57,
     "priceWholesale": 12.81,
     "priceRetail": 13.167,
@@ -38,6 +42,7 @@
   {
     "code": "BC005",
     "name": "BLUECHIP 40ML (VESLINE)",
+    "pp": 13.84,
     "priceBulk": 14.53,
     "priceWholesale": 14.81,
     "priceRetail": 15.224,
@@ -47,6 +52,7 @@
   {
     "code": "BC006",
     "name": "BLUECHIP 50ML (VESLINE)",
+    "pp": 18.85,
     "priceBulk": 19.79,
     "priceWholesale": 20.16,
     "priceRetail": 20.735,
@@ -56,6 +62,7 @@
   {
     "code": "BC007",
     "name": "BLUECHIP 100ML (VESLINE)",
+    "pp": 39.59,
     "priceBulk": 41.57,
     "priceWholesale": 42.36,
     "priceRetail": 43.549,
@@ -65,6 +72,7 @@
   {
     "code": "BC008",
     "name": "BLUECHIP 220ML (VESLINE)",
+    "pp": 84.18,
     "priceBulk": 88.39,
     "priceWholesale": 90.07,
     "priceRetail": 92.598,
@@ -74,6 +82,7 @@
   {
     "code": "BC009",
     "name": "BLUECHIP REO 25GM (VESLINE)",
+    "pp": 13.33,
     "priceBulk": 14.00,
     "priceWholesale": 14.26,
     "priceRetail": 14.663,
@@ -83,6 +92,7 @@
   {
     "code": "BC010",
     "name": "BLUECHIP REO 48GM (VESLINE)",
+    "pp": 22.23,
     "priceBulk": 23.34,
     "priceWholesale": 23.78,
     "priceRetail": 24.453,
@@ -92,6 +102,7 @@
   {
     "code": "BC011",
     "name": "BLUECHIP REO 90GM (VESLINE)",
+    "pp": 39.59,
     "priceBulk": 41.57,
     "priceWholesale": 42.36,
     "priceRetail": 43.549,
@@ -101,6 +112,7 @@
   {
     "code": "BC012",
     "name": "BLUECHIP REO 175GM (VESLINE)",
+    "pp": 74.25,
     "priceBulk": 77.96,
     "priceWholesale": 79.45,
     "priceRetail": 81.675,
@@ -110,6 +122,7 @@
   {
     "code": "BC013",
     "name": "BLUECHIP STRWABERRY 7ML (LIPBAM)",
+    "pp": 6.20,
     "priceBulk": 6.51,
     "priceWholesale": 6.63,
     "priceRetail": 6.82,
@@ -119,6 +132,7 @@
   {
     "code": "BC014",
     "name": "BLUECHIP STRWABERRY TUBE 7ML",
+    "pp": 7.01,
     "priceBulk": 7.36,
     "priceWholesale": 7.50,
     "priceRetail": 7.711,
@@ -128,6 +142,7 @@
   {
     "code": "BC015",
     "name": "BLUECHIP 20ML (BODYLOTION)",
+    "pp": 5.36,
     "priceBulk": 5.63,
     "priceWholesale": 5.74,
     "priceRetail": 5.896,
@@ -137,6 +152,7 @@
   {
     "code": "BC016",
     "name": "BLUECHIP 40ML (BODYLOTION)",
+    "pp": 10.57,
     "priceBulk": 11.10,
     "priceWholesale": 11.31,
     "priceRetail": 11.627,
@@ -146,6 +162,7 @@
   {
     "code": "BC017",
     "name": "BLUECHIP ALMOND 100ML",
+    "pp": 28.04,
     "priceBulk": 29.44,
     "priceWholesale": 30.00,
     "priceRetail": 30.844,
@@ -155,6 +172,7 @@
   {
     "code": "BC018",
     "name": "BLUECHIP APPLE PEACH 100ML",
+    "pp": 28.04,
     "priceBulk": 29.44,
     "priceWholesale": 30.00,
     "priceRetail": 30.844,
@@ -164,6 +182,7 @@
   {
     "code": "BC019",
     "name": "BLUECHIP ROSE 100ML (BODYLOTION)",
+    "pp": 28.04,
     "priceBulk": 29.44,
     "priceWholesale": 30.00,
     "priceRetail": 30.844,
@@ -173,6 +192,7 @@
   {
     "code": "BC020",
     "name": "BLUECHIP ALOEVERA 100ML",
+    "pp": 28.04,
     "priceBulk": 29.44,
     "priceWholesale": 30.00,
     "priceRetail": 30.844,
@@ -182,6 +202,7 @@
   {
     "code": "BC021",
     "name": "BLUECHIP ALMOND 300ML",
+    "pp": 61.69,
     "priceBulk": 64.77,
     "priceWholesale": 66.01,
     "priceRetail": 67.859,
@@ -191,6 +212,7 @@
   {
     "code": "BC022",
     "name": "BLUECHIP APPLE PEACH 300ML",
+    "pp": 61.69,
     "priceBulk": 64.77,
     "priceWholesale": 66.01,
     "priceRetail": 67.859,
@@ -200,6 +222,7 @@
   {
     "code": "BC023",
     "name": "BLUECHIP ROSE 300ML (BODYLOTION)",
+    "pp": 61.69,
     "priceBulk": 64.77,
     "priceWholesale": 66.01,
     "priceRetail": 67.859,
@@ -209,6 +232,7 @@
   {
     "code": "BC024",
     "name": "BLUECHIP ALOE VERA 300ML",
+    "pp": 61.69,
     "priceBulk": 64.77,
     "priceWholesale": 66.01,
     "priceRetail": 67.859,
@@ -218,6 +242,7 @@
   {
     "code": "BC025",
     "name": "BLUECHIP ALMOND 500ML",
+    "pp": 93.47,
     "priceBulk": 98.14,
     "priceWholesale": 100.01,
     "priceRetail": 102.817,
@@ -227,6 +252,7 @@
   {
     "code": "BC026",
     "name": "BLUECHIP APPLE PEACH 500ML",
+    "pp": 93.47,
     "priceBulk": 98.14,
     "priceWholesale": 100.01,
     "priceRetail": 102.817,
@@ -236,6 +262,7 @@
   {
     "code": "BC027",
     "name": "BLUECHIP ROSE 500ML (BODYLOTION)",
+    "pp": 93.47,
     "priceBulk": 98.14,
     "priceWholesale": 100.01,
     "priceRetail": 102.817,
@@ -245,6 +272,7 @@
   {
     "code": "BC028",
     "name": "BLUECHIP ALOEVERA 500ML",
+    "pp": 93.47,
     "priceBulk": 98.14,
     "priceWholesale": 100.01,
     "priceRetail": 102.817,
@@ -254,6 +282,7 @@
   {
     "code": "BC029",
     "name": "BLUECHIP (MIX) 300ML (BODYLOTION)",
+    "pp": 61.69,
     "priceBulk": 64.77,
     "priceWholesale": 66.01,
     "priceRetail": 67.859,
@@ -263,6 +292,7 @@
   {
     "code": "BC030",
     "name": "BLUECHIP (MIX) 500ML (BODYLOTION)",
+    "pp": 93.47,
     "priceBulk": 98.14,
     "priceWholesale": 100.01,
     "priceRetail": 102.817,
@@ -272,6 +302,7 @@
   {
     "code": "BC031",
     "name": "BB FACE TALC 12GM (POWDER)",
+    "pp": 5.25,
     "priceBulk": 5.51,
     "priceWholesale": 5.62,
     "priceRetail": 5.775,
@@ -281,6 +312,7 @@
   {
     "code": "BC032",
     "name": "BLUECHIP AYURVEDIC 50ML (VESLINE)",
+    "pp": 20.87,
     "priceBulk": 21.91,
     "priceWholesale": 22.33,
     "priceRetail": 22.957,
@@ -290,6 +322,7 @@
   {
     "code": "BC033",
     "name": "BLUECHIP 30ML (GULABJAL)",
+    "pp": 5.85,
     "priceBulk": 6.14,
     "priceWholesale": 6.26,
     "priceRetail": 6.435,
@@ -299,6 +332,7 @@
   {
     "code": "BC034",
     "name": "BLUECHIP 60ML (GULABJAL)",
+    "pp": 9.83,
     "priceBulk": 10.32,
     "priceWholesale": 10.51,
     "priceRetail": 10.813,
@@ -308,6 +342,7 @@
   {
     "code": "BC035",
     "name": "BLUECHIP 120ML (GULABJAL)",
+    "pp": 17.30,
     "priceBulk": 18.17,
     "priceWholesale": 18.51,
     "priceRetail": 19.03,
@@ -317,6 +352,7 @@
   {
     "code": "BC036",
     "name": "BLUECHIP 250ML (GULABJAL)",
+    "pp": 32.72,
     "priceBulk": 34.36,
     "priceWholesale": 35.01,
     "priceRetail": 35.992,
@@ -326,6 +362,7 @@
   {
     "code": "BC037",
     "name": "BLUECHIP ROZY MIST (GULABJAL)",
+    "pp": 27.83,
     "priceBulk": 29.22,
     "priceWholesale": 29.78,
     "priceRetail": 30.613,

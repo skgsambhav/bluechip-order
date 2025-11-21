@@ -68,13 +68,18 @@ function updateLineTotal() {
     return;
   }
 
-  const costPrice = product[currentPriceType];
-  itemPriceSpan.textContent = costPrice.toFixed(2);
-  salePriceSpan.textContent = salePrice.toFixed(2);
+  const dealerPrice = product[currentPriceType];
+  const purchasePrice = product.pp;
 
-  // Calculate margin percentage
-  if (salePrice > 0 && costPrice > 0) {
-    const margin = ((salePrice - costPrice) / costPrice) * 100;
+  itemPriceSpan.textContent = dealerPrice.toFixed(2);
+
+  // If sale price entered, show it; else show dealer price
+  const displayPrice = salePrice > 0 ? salePrice : dealerPrice;
+  salePriceSpan.textContent = displayPrice.toFixed(2);
+
+  // Calculate margin percentage from Purchase Price
+  if (displayPrice > 0 && purchasePrice > 0) {
+    const margin = ((displayPrice - purchasePrice) / purchasePrice) * 100;
     marginPercentSpan.textContent = margin.toFixed(2);
   } else {
     marginPercentSpan.textContent = "0";
@@ -85,7 +90,7 @@ function updateLineTotal() {
 function addItem() {
   const product = getSelectedProduct();
   const qty = qtyInput.value.trim();
-  const salePrice = parseFloat(salePriceInput.value) || 0;
+  const customSalePrice = parseFloat(salePriceInput.value) || 0;
 
   if (!product) {
     alert("Pehele item select karo.");
@@ -95,22 +100,21 @@ function addItem() {
     alert("Qty enter karo.");
     return;
   }
-  if (salePrice <= 0) {
-    alert("Sale Price enter karo.");
-    salePriceInput.focus();
-    return;
-  }
 
-  const costPrice = product[currentPriceType];
-  const margin = ((salePrice - costPrice) / costPrice) * 100;
+  const dealerPrice = product[currentPriceType];
+  const purchasePrice = product.pp;
+
+  // Use custom sale price if entered, else use dealer price
+  const finalSalePrice = customSalePrice > 0 ? customSalePrice : dealerPrice;
+
+  // Calculate margin from Purchase Price
+  const margin = ((finalSalePrice - purchasePrice) / purchasePrice) * 100;
 
   // Multi-line format for each item
-  const itemBlock = `Item: ${product.name}
-MRP: ₹${product.mrp}
-Size: ${product.itemSize}
-Qty: ${qty}
-Sale Price: ₹${salePrice.toFixed(2)}
-Margin: ${margin.toFixed(2)}%`;
+  const itemBlock = `${product.name}
+MRP: ₹${product.mrp} | Size: ${product.itemSize}
+Order Qty: ${qty} | Margin: ${margin.toFixed(2)}%
+Quote Price: ₹${finalSalePrice.toFixed(2)}`;
 
   if (orderTextArea.value.trim() !== "") {
     orderTextArea.value += "\n------------------------\n";
