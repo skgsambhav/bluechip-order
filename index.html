@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bluechip Order System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Bluechip Order System</h1>
+
+  <!-- Agent ka naam -->
+  <label for="agentName">Agent Name (optional)</label>
+  <input type="text" id="agentName" placeholder="Agent ka naam likho">
+
+  <!-- Item select -->
+  <label for="itemSelect">Item choose karo</label>
+  <select id="itemSelect">
+    <option value="">-- Items loading... --</option>
+  </select>
+
+  <div class="row">
+    <div>
+      <label for="qtyInput">Qty</label>
+      <input type="number" id="qtyInput" min="1" value="1">
+    </div>
+    <div class="price-box">
+      <div>Rate: ₹<span id="itemPrice">0</span></div>
+      <div>Line Total: ₹<span id="lineTotal">0</span></div>
+    </div>
+  </div>
+
+  <button id="addItemBtn" class="btn-secondary">+ Add Item</button>
+
+  <div class="total">
+    Grand Total: ₹<span id="grandTotal">0</span>
+  </div>
+
+  <label for="orderText">Order Details</label>
+  <textarea id="orderText" readonly></textarea>
+
+  <button id="clearBtn" class="btn-secondary">Clear Order</button>
+  <button id="sendWhatsAppBtn" class="btn-primary">WhatsApp pe bhejo</button>
+
+  <p class="small">
+    Prices <code>items.json</code> file se aa rahe hain.  
+    JSON file update karke price list change kar sakte ho.
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

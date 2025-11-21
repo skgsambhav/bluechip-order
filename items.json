@@ -1,0 +1,6 @@
+[
+  { "code": "BC01", "name": "Bluechip Cream 50g", "price": 120 },
+  { "code": "BC02", "name": "Bluechip Cream 100g", "price": 200 },
+  { "code": "BC03", "name": "Bluechip Face Wash", "price": 150 },
+  { "code": "BC04", "name": "Bluechip Lotion 200ml", "price": 250 }
+]
