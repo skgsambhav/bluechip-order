@@ -1,6 +1,6 @@
 // YAHAN APNA WHATSAPP NUMBER DAALO (country code ke saath, bina + ke)
 // Example: 91 + 9876543210 --> "919876543210"
-const OWNER_WHATSAPP_NUMBER = "91XXXXXXXXXX"; // <-- yahan apna number
+const OWNER_WHATSAPP_NUMBER = "919977414177"; // <-- yahan apna number
 
 let PRODUCTS = [];
 let grandTotal = 0;
@@ -130,3 +130,4 @@ clearBtn.addEventListener("click", clearOrder);
 
 // shuru me products load
 loadProducts();
+
