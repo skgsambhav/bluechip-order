@@ -3,14 +3,14 @@
 const OWNER_WHATSAPP_NUMBER = "919977414177"; // <-- yahan apna number
 
 let PRODUCTS = [];
-let grandTotal = 0;
 let currentPriceType = "priceWholesale"; // default
 
 const itemSelect = document.getElementById("itemSelect");
 const qtyInput = document.getElementById("qtyInput");
+const salePriceInput = document.getElementById("salePriceInput");
 const itemPriceSpan = document.getElementById("itemPrice");
-const lineTotalSpan = document.getElementById("lineTotal");
-const grandTotalSpan = document.getElementById("grandTotal");
+const salePriceSpan = document.getElementById("salePrice");
+const marginPercentSpan = document.getElementById("marginPercent");
 const orderTextArea = document.getElementById("orderText");
 const addItemBtn = document.getElementById("addItemBtn");
 const sendWhatsAppBtn = document.getElementById("sendWhatsAppBtn");
@@ -56,50 +56,70 @@ function getSelectedProduct() {
   return PRODUCTS.find(p => p.code === code);
 }
 
-// qty ya item change par line total update karo
+// qty ya item change par price and margin update karo
 function updateLineTotal() {
   const product = getSelectedProduct();
-  const qty = parseInt(qtyInput.value) || 0;
+  const salePrice = parseFloat(salePriceInput.value) || 0;
 
-  if (!product || qty <= 0) {
+  if (!product) {
     itemPriceSpan.textContent = "0";
-    lineTotalSpan.textContent = "0";
+    salePriceSpan.textContent = "0";
+    marginPercentSpan.textContent = "0";
     return;
   }
 
-  const price = product[currentPriceType];
-  const lineTotal = price * qty;
-  itemPriceSpan.textContent = price.toString();
-  lineTotalSpan.textContent = lineTotal.toString();
+  const costPrice = product[currentPriceType];
+  itemPriceSpan.textContent = costPrice.toFixed(2);
+  salePriceSpan.textContent = salePrice.toFixed(2);
+
+  // Calculate margin percentage
+  if (salePrice > 0 && costPrice > 0) {
+    const margin = ((salePrice - costPrice) / costPrice) * 100;
+    marginPercentSpan.textContent = margin.toFixed(2);
+  } else {
+    marginPercentSpan.textContent = "0";
+  }
 }
 
 // item ko order list me add karo
 function addItem() {
   const product = getSelectedProduct();
-  const qty = parseInt(qtyInput.value) || 0;
+  const qty = qtyInput.value.trim();
+  const salePrice = parseFloat(salePriceInput.value) || 0;
 
   if (!product) {
     alert("Pehele item select karo.");
     return;
   }
-  if (qty <= 0) {
-    alert("Qty 1 ya usse zyada honi chahiye.");
+  if (!qty) {
+    alert("Qty enter karo.");
+    return;
+  }
+  if (salePrice <= 0) {
+    alert("Sale Price enter karo.");
+    salePriceInput.focus();
     return;
   }
 
-  const price = product[currentPriceType];
-  const lineTotal = price * qty;
-  const line = `${product.name} | Qty: ${qty} | Rate: ₹${price} | Total: ₹${lineTotal}`;
+  const costPrice = product[currentPriceType];
+  const margin = ((salePrice - costPrice) / costPrice) * 100;
+
+  // Multi-line format for each item
+  const itemBlock = `Item: ${product.name}
+MRP: ₹${product.mrp}
+Size: ${product.itemSize}
+Qty: ${qty}
+Sale Price: ₹${salePrice.toFixed(2)}
+Margin: ${margin.toFixed(2)}%`;
 
   if (orderTextArea.value.trim() !== "") {
-    orderTextArea.value += "\n";
+    orderTextArea.value += "\n------------------------\n";
   }
-  orderTextArea.value += line;
+  orderTextArea.value += itemBlock;
 
-  grandTotal += lineTotal;
-  grandTotalSpan.textContent = grandTotal.toString();
-
+  // Reset inputs
   qtyInput.value = "1";
+  salePriceInput.value = "";
   updateLineTotal();
 }
 
@@ -124,11 +144,8 @@ function sendToWhatsApp() {
   // Price type display
   const priceTypeText = priceTypeSelect.options[priceTypeSelect.selectedIndex].text;
   finalText += `Price Type: ${priceTypeText}\n`;
-
-  finalText += "------------------------\n";
-  finalText += text + "\n";
-  finalText += "------------------------\n";
-  finalText += `Grand Total: ₹${grandTotal}`;
+  finalText += "========================\n\n";
+  finalText += text;
 
   const encoded = encodeURIComponent(finalText);
   const url = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encoded}`;
@@ -139,8 +156,6 @@ function sendToWhatsApp() {
 function clearOrder() {
   if (!confirm("Saara order clear karna hai?")) return;
   orderTextArea.value = "";
-  grandTotal = 0;
-  grandTotalSpan.textContent = "0";
 }
 
 // price type change handler
@@ -152,7 +167,7 @@ function changePriceType() {
 
 // event listeners
 itemSelect.addEventListener("change", updateLineTotal);
-qtyInput.addEventListener("input", updateLineTotal);
+salePriceInput.addEventListener("input", updateLineTotal);
 addItemBtn.addEventListener("click", addItem);
 sendWhatsAppBtn.addEventListener("click", sendToWhatsApp);
 clearBtn.addEventListener("click", clearOrder);
