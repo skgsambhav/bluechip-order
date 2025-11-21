@@ -1,6 +1,335 @@
 [
-  { "code": "BC01", "name": "Bluechip Cream 50g", "price": 120 },
-  { "code": "BC02", "name": "Bluechip Cream 100g", "price": 200 },
-  { "code": "BC03", "name": "Bluechip Face Wash", "price": 150 },
-  { "code": "BC04", "name": "Bluechip Lotion 200ml", "price": 250 }
+  {
+    "code": "BC001",
+    "name": "BLUECHIP 6ML (VESLINE)",
+    "priceBulk": 3.12,
+    "priceWholesale": 3.18,
+    "priceRetail": 3.267,
+    "mrp": 5,
+    "itemSize": "1CTN=1728 PCS"
+  },
+  {
+    "code": "BC002",
+    "name": "BLUECHIP 12ML (VESLINE)",
+    "priceBulk": 6.25,
+    "priceWholesale": 6.36,
+    "priceRetail": 6.545,
+    "mrp": 10,
+    "itemSize": "1CTN=1152 PCS"
+  },
+  {
+    "code": "BC003",
+    "name": "BLUECHIP 20ML (VESLINE)",
+    "priceBulk": 7.79,
+    "priceWholesale": 7.94,
+    "priceRetail": 8.162,
+    "mrp": 30,
+    "itemSize": "1CTN=576 PCS"
+  },
+  {
+    "code": "BC004",
+    "name": "BLUECHIP 30ML (VESLINE)",
+    "priceBulk": 12.57,
+    "priceWholesale": 12.81,
+    "priceRetail": 13.167,
+    "mrp": 40,
+    "itemSize": "1CTN=432 PCS"
+  },
+  {
+    "code": "BC005",
+    "name": "BLUECHIP 40ML (VESLINE)",
+    "priceBulk": 14.53,
+    "priceWholesale": 14.81,
+    "priceRetail": 15.224,
+    "mrp": 50,
+    "itemSize": "1CTN=432 PCS"
+  },
+  {
+    "code": "BC006",
+    "name": "BLUECHIP 50ML (VESLINE)",
+    "priceBulk": 19.79,
+    "priceWholesale": 20.16,
+    "priceRetail": 20.735,
+    "mrp": 70,
+    "itemSize": "1CTN=288 PCS"
+  },
+  {
+    "code": "BC007",
+    "name": "BLUECHIP 100ML (VESLINE)",
+    "priceBulk": 41.57,
+    "priceWholesale": 42.36,
+    "priceRetail": 43.549,
+    "mrp": 120,
+    "itemSize": "1CTN=144 PCS"
+  },
+  {
+    "code": "BC008",
+    "name": "BLUECHIP 220ML (VESLINE)",
+    "priceBulk": 88.39,
+    "priceWholesale": 90.07,
+    "priceRetail": 92.598,
+    "mrp": 300,
+    "itemSize": "1CTN=72 PCS"
+  },
+  {
+    "code": "BC009",
+    "name": "BLUECHIP REO 25GM (VESLINE)",
+    "priceBulk": 14.00,
+    "priceWholesale": 14.26,
+    "priceRetail": 14.663,
+    "mrp": 50,
+    "itemSize": "1CTN=432 PCS"
+  },
+  {
+    "code": "BC010",
+    "name": "BLUECHIP REO 48GM (VESLINE)",
+    "priceBulk": 23.34,
+    "priceWholesale": 23.78,
+    "priceRetail": 24.453,
+    "mrp": 80,
+    "itemSize": "1CTN=288 PCS"
+  },
+  {
+    "code": "BC011",
+    "name": "BLUECHIP REO 90GM (VESLINE)",
+    "priceBulk": 41.57,
+    "priceWholesale": 42.36,
+    "priceRetail": 43.549,
+    "mrp": 150,
+    "itemSize": "1CTN=144 PCS"
+  },
+  {
+    "code": "BC012",
+    "name": "BLUECHIP REO 175GM (VESLINE)",
+    "priceBulk": 77.96,
+    "priceWholesale": 79.45,
+    "priceRetail": 81.675,
+    "mrp": 300,
+    "itemSize": "1CTN=72 PCS"
+  },
+  {
+    "code": "BC013",
+    "name": "BLUECHIP STRWABERRY 7ML (LIPBAM)",
+    "priceBulk": 6.51,
+    "priceWholesale": 6.63,
+    "priceRetail": 6.82,
+    "mrp": 10,
+    "itemSize": "1CTN=720 PCS"
+  },
+  {
+    "code": "BC014",
+    "name": "BLUECHIP STRWABERRY TUBE 7ML",
+    "priceBulk": 7.36,
+    "priceWholesale": 7.50,
+    "priceRetail": 7.711,
+    "mrp": 15,
+    "itemSize": "1CTN=768 PCS"
+  },
+  {
+    "code": "BC015",
+    "name": "BLUECHIP 20ML (BODYLOTION)",
+    "priceBulk": 5.63,
+    "priceWholesale": 5.74,
+    "priceRetail": 5.896,
+    "mrp": 10,
+    "itemSize": "1CTN=480 PCS"
+  },
+  {
+    "code": "BC016",
+    "name": "BLUECHIP 40ML (BODYLOTION)",
+    "priceBulk": 11.10,
+    "priceWholesale": 11.31,
+    "priceRetail": 11.627,
+    "mrp": 25,
+    "itemSize": "1CTN=384 PCS"
+  },
+  {
+    "code": "BC017",
+    "name": "BLUECHIP ALMOND 100ML",
+    "priceBulk": 29.44,
+    "priceWholesale": 30.00,
+    "priceRetail": 30.844,
+    "mrp": 75,
+    "itemSize": "1CTN=72 PCS"
+  },
+  {
+    "code": "BC018",
+    "name": "BLUECHIP APPLE PEACH 100ML",
+    "priceBulk": 29.44,
+    "priceWholesale": 30.00,
+    "priceRetail": 30.844,
+    "mrp": 75,
+    "itemSize": "1CTN=72 PCS"
+  },
+  {
+    "code": "BC019",
+    "name": "BLUECHIP ROSE 100ML (BODYLOTION)",
+    "priceBulk": 29.44,
+    "priceWholesale": 30.00,
+    "priceRetail": 30.844,
+    "mrp": 75,
+    "itemSize": "1CTN=72 PCS"
+  },
+  {
+    "code": "BC020",
+    "name": "BLUECHIP ALOEVERA 100ML",
+    "priceBulk": 29.44,
+    "priceWholesale": 30.00,
+    "priceRetail": 30.844,
+    "mrp": 75,
+    "itemSize": "1CTN=72 PCS"
+  },
+  {
+    "code": "BC021",
+    "name": "BLUECHIP ALMOND 300ML",
+    "priceBulk": 64.77,
+    "priceWholesale": 66.01,
+    "priceRetail": 67.859,
+    "mrp": 150,
+    "itemSize": "1CTN=36 PCS"
+  },
+  {
+    "code": "BC022",
+    "name": "BLUECHIP APPLE PEACH 300ML",
+    "priceBulk": 64.77,
+    "priceWholesale": 66.01,
+    "priceRetail": 67.859,
+    "mrp": 150,
+    "itemSize": "1CTN=36 PCS"
+  },
+  {
+    "code": "BC023",
+    "name": "BLUECHIP ROSE 300ML (BODYLOTION)",
+    "priceBulk": 64.77,
+    "priceWholesale": 66.01,
+    "priceRetail": 67.859,
+    "mrp": 150,
+    "itemSize": "1CTN=36 PCS"
+  },
+  {
+    "code": "BC024",
+    "name": "BLUECHIP ALOE VERA 300ML",
+    "priceBulk": 64.77,
+    "priceWholesale": 66.01,
+    "priceRetail": 67.859,
+    "mrp": 150,
+    "itemSize": "1CTN=36 PCS"
+  },
+  {
+    "code": "BC025",
+    "name": "BLUECHIP ALMOND 500ML",
+    "priceBulk": 98.14,
+    "priceWholesale": 100.01,
+    "priceRetail": 102.817,
+    "mrp": 250,
+    "itemSize": "1CTN=24 PCS"
+  },
+  {
+    "code": "BC026",
+    "name": "BLUECHIP APPLE PEACH 500ML",
+    "priceBulk": 98.14,
+    "priceWholesale": 100.01,
+    "priceRetail": 102.817,
+    "mrp": 250,
+    "itemSize": "1CTN=24 PCS"
+  },
+  {
+    "code": "BC027",
+    "name": "BLUECHIP ROSE 500ML (BODYLOTION)",
+    "priceBulk": 98.14,
+    "priceWholesale": 100.01,
+    "priceRetail": 102.817,
+    "mrp": 250,
+    "itemSize": "1CTN=24 PCS"
+  },
+  {
+    "code": "BC028",
+    "name": "BLUECHIP ALOEVERA 500ML",
+    "priceBulk": 98.14,
+    "priceWholesale": 100.01,
+    "priceRetail": 102.817,
+    "mrp": 250,
+    "itemSize": "1CTN=24 PCS"
+  },
+  {
+    "code": "BC029",
+    "name": "BLUECHIP (MIX) 300ML (BODYLOTION)",
+    "priceBulk": 64.77,
+    "priceWholesale": 66.01,
+    "priceRetail": 67.859,
+    "mrp": 150,
+    "itemSize": "1CTN=36 PCS"
+  },
+  {
+    "code": "BC030",
+    "name": "BLUECHIP (MIX) 500ML (BODYLOTION)",
+    "priceBulk": 98.14,
+    "priceWholesale": 100.01,
+    "priceRetail": 102.817,
+    "mrp": 250,
+    "itemSize": "1CTN=24 PCS"
+  },
+  {
+    "code": "BC031",
+    "name": "BB FACE TALC 12GM (POWDER)",
+    "priceBulk": 5.51,
+    "priceWholesale": 5.62,
+    "priceRetail": 5.775,
+    "mrp": 10,
+    "itemSize": "1CTN=480 PCS"
+  },
+  {
+    "code": "BC032",
+    "name": "BLUECHIP AYURVEDIC 50ML (VESLINE)",
+    "priceBulk": 21.91,
+    "priceWholesale": 22.33,
+    "priceRetail": 22.957,
+    "mrp": 65,
+    "itemSize": "1CTN=288 PCS"
+  },
+  {
+    "code": "BC033",
+    "name": "BLUECHIP 30ML (GULABJAL)",
+    "priceBulk": 6.14,
+    "priceWholesale": 6.26,
+    "priceRetail": 6.435,
+    "mrp": 10,
+    "itemSize": "1CTN=576 PCS"
+  },
+  {
+    "code": "BC034",
+    "name": "BLUECHIP 60ML (GULABJAL)",
+    "priceBulk": 10.32,
+    "priceWholesale": 10.51,
+    "priceRetail": 10.813,
+    "mrp": 25,
+    "itemSize": "1CTN=240 PCS"
+  },
+  {
+    "code": "BC035",
+    "name": "BLUECHIP 120ML (GULABJAL)",
+    "priceBulk": 18.17,
+    "priceWholesale": 18.51,
+    "priceRetail": 19.03,
+    "mrp": 50,
+    "itemSize": "1CTN=120 PCS"
+  },
+  {
+    "code": "BC036",
+    "name": "BLUECHIP 250ML (GULABJAL)",
+    "priceBulk": 34.36,
+    "priceWholesale": 35.01,
+    "priceRetail": 35.992,
+    "mrp": 90,
+    "itemSize": "1CTN=72 PCS"
+  },
+  {
+    "code": "BC037",
+    "name": "BLUECHIP ROZY MIST (GULABJAL)",
+    "priceBulk": 29.22,
+    "priceWholesale": 29.78,
+    "priceRetail": 30.613,
+    "mrp": 80,
+    "itemSize": "1CTN-120PCS"
+  }
 ]

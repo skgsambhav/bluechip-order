@@ -4,6 +4,7 @@ const OWNER_WHATSAPP_NUMBER = "919977414177"; // <-- yahan apna number
 
 let PRODUCTS = [];
 let grandTotal = 0;
+let currentPriceType = "priceWholesale"; // default
 
 const itemSelect = document.getElementById("itemSelect");
 const qtyInput = document.getElementById("qtyInput");
@@ -14,29 +15,39 @@ const orderTextArea = document.getElementById("orderText");
 const addItemBtn = document.getElementById("addItemBtn");
 const sendWhatsAppBtn = document.getElementById("sendWhatsAppBtn");
 const clearBtn = document.getElementById("clearBtn");
-const agentNameInput = document.getElementById("agentName");
+const customerNameInput = document.getElementById("customerName");
+const priceTypeSelect = document.getElementById("priceType");
 
 // items.json se data load karo
 async function loadProducts() {
   try {
+    console.log("Loading items.json...");
     const res = await fetch("items.json");
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
     PRODUCTS = await res.json();
+    console.log(`Loaded ${PRODUCTS.length} products`);
     fillDropdown();
   } catch (err) {
     console.error("items.json load nahi hua:", err);
+    alert("Items load nahi ho rahe. Browser console check karo.");
     itemSelect.innerHTML = '<option value="">Error loading items</option>';
   }
 }
 
 // dropdown me options daalna
 function fillDropdown() {
+  console.log(`Filling dropdown with ${PRODUCTS.length} products`);
   itemSelect.innerHTML = '<option value="">-- Item select karein --</option>';
   PRODUCTS.forEach(p => {
     const opt = document.createElement("option");
     opt.value = p.code;
-    opt.textContent = `${p.name} (₹${p.price})`;
+    const price = p[currentPriceType];
+    opt.textContent = `${p.name} (₹${price})`;
     itemSelect.appendChild(opt);
   });
+  console.log("Dropdown filled successfully");
 }
 
 // selected product nikaalo
@@ -56,8 +67,9 @@ function updateLineTotal() {
     return;
   }
 
-  const lineTotal = product.price * qty;
-  itemPriceSpan.textContent = product.price.toString();
+  const price = product[currentPriceType];
+  const lineTotal = price * qty;
+  itemPriceSpan.textContent = price.toString();
   lineTotalSpan.textContent = lineTotal.toString();
 }
 
@@ -75,8 +87,9 @@ function addItem() {
     return;
   }
 
-  const lineTotal = product.price * qty;
-  const line = `${product.name} | Qty: ${qty} | Rate: ₹${product.price} | Total: ₹${lineTotal}`;
+  const price = product[currentPriceType];
+  const lineTotal = price * qty;
+  const line = `${product.name} | Qty: ${qty} | Rate: ₹${price} | Total: ₹${lineTotal}`;
 
   if (orderTextArea.value.trim() !== "") {
     orderTextArea.value += "\n";
@@ -92,6 +105,13 @@ function addItem() {
 
 // WhatsApp pe bhejna
 function sendToWhatsApp() {
+  const customerName = customerNameInput.value.trim();
+  if (!customerName) {
+    alert("Customer Name zaruri hai.");
+    customerNameInput.focus();
+    return;
+  }
+
   const text = orderTextArea.value.trim();
   if (!text) {
     alert("Koi item add nahi hai.");
@@ -99,10 +119,12 @@ function sendToWhatsApp() {
   }
 
   let finalText = "Bluechip Order\n";
-  const agentName = agentNameInput.value.trim();
-  if (agentName) {
-    finalText += `Agent: ${agentName}\n`;
-  }
+  finalText += `Customer: ${customerName}\n`;
+
+  // Price type display
+  const priceTypeText = priceTypeSelect.options[priceTypeSelect.selectedIndex].text;
+  finalText += `Price Type: ${priceTypeText}\n`;
+
   finalText += "------------------------\n";
   finalText += text + "\n";
   finalText += "------------------------\n";
@@ -121,12 +143,20 @@ function clearOrder() {
   grandTotalSpan.textContent = "0";
 }
 
+// price type change handler
+function changePriceType() {
+  currentPriceType = priceTypeSelect.value;
+  fillDropdown();
+  updateLineTotal();
+}
+
 // event listeners
 itemSelect.addEventListener("change", updateLineTotal);
 qtyInput.addEventListener("input", updateLineTotal);
 addItemBtn.addEventListener("click", addItem);
 sendWhatsAppBtn.addEventListener("click", sendToWhatsApp);
 clearBtn.addEventListener("click", clearOrder);
+priceTypeSelect.addEventListener("change", changePriceType);
 
 // shuru me products load
 loadProducts();

@@ -10,9 +10,17 @@
 <div class="container">
   <h1>Gopal Marketing - Bluechip Order System</h1>
 
-  <!-- Agent ka naam -->
-  <label for="agentName">Agent Name (optional)</label>
-  <input type="text" id="agentName" placeholder="Agent ka naam likho">
+  <!-- Customer Name -->
+  <label for="customerName">Customer Name *</label>
+  <input type="text" id="customerName" placeholder="Customer ka naam likho" required>
+
+  <!-- Price Type Selection -->
+  <label for="priceType">Select Price Type *</label>
+  <select id="priceType">
+    <option value="priceBulk">DB to BULK 5% (inc GST)</option>
+    <option value="priceWholesale" selected>DB to WS 7% (inc GST)</option>
+    <option value="priceRetail">DB to Retail 10% (inc GST)</option>
+  </select>
 
   <!-- Item select -->
   <label for="itemSelect">Item choose karo</label>
@@ -22,7 +30,7 @@
 
   <div class="row">
     <div>
-      <label for="qtyInput">Qty</label>
+      <label for="qtyInput">Order Qty</label>
       <input type="number" id="qtyInput" min="1" value="1">
     </div>
     <div class="price-box">
