@@ -18,6 +18,12 @@ const clearBtn = document.getElementById("clearBtn");
 const customerNameInput = document.getElementById("customerName");
 const priceTypeSelect = document.getElementById("priceType");
 
+const round2 = (num) => Math.round(num * 100) / 100;
+const toNumber = (val) => {
+  const n = Number(val);
+  return Number.isFinite(n) ? n : null;
+};
+
 // items.json se data load karo
 async function loadProducts() {
   try {
@@ -26,7 +32,33 @@ async function loadProducts() {
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
     }
-    PRODUCTS = await res.json();
+    const rawItems = await res.json();
+
+    // JSON ko normalize karo taaki naye column DB to Retail (10%) ka use ho
+    PRODUCTS = rawItems.map((item) => {
+      const purchasePrice = toNumber(item.Purc_price) ?? 0;
+      const priceWholesale =
+        toNumber(item.db_to_ws_pcs_price) ??
+        toNumber(item.priceWholesale) ??
+        round2(purchasePrice * 1.07);
+      const priceRetail =
+        toNumber(item.db_to_retail_pcs_price) ??
+        toNumber(item.priceRetail) ??
+        round2(purchasePrice * 1.1);
+      const priceBulk =
+        toNumber(item.priceBulk) ?? round2(purchasePrice * 1.05);
+
+      return {
+        code: item.code,
+        name: item.item_name || item.name || item.code,
+        mrp: toNumber(item.mrp) ?? 0,
+        itemSize: item.pcs_ctn ? `${item.pcs_ctn} pcs/ctn` : "",
+        pp: purchasePrice,
+        priceBulk,
+        priceWholesale,
+        priceRetail,
+      };
+    });
     console.log(`Loaded ${PRODUCTS.length} products`);
     fillDropdown();
   } catch (err) {
@@ -40,11 +72,15 @@ async function loadProducts() {
 function fillDropdown() {
   console.log(`Filling dropdown with ${PRODUCTS.length} products`);
   itemSelect.innerHTML = '<option value="">-- Item select karein --</option>';
-  PRODUCTS.forEach(p => {
+  PRODUCTS.forEach((p) => {
     const opt = document.createElement("option");
     opt.value = p.code;
     const price = p[currentPriceType];
-    opt.textContent = `${p.name} (₹${price})`;
+    const priceLabel =
+      typeof price === "number" && !Number.isNaN(price)
+        ? price.toFixed(2)
+        : "N/A";
+    opt.textContent = `${p.name} (Rs.${priceLabel})`;
     itemSelect.appendChild(opt);
   });
   console.log("Dropdown filled successfully");
@@ -53,7 +89,7 @@ function fillDropdown() {
 // selected product nikaalo
 function getSelectedProduct() {
   const code = itemSelect.value;
-  return PRODUCTS.find(p => p.code === code);
+  return PRODUCTS.find((p) => p.code === code);
 }
 
 // qty ya item change par price and margin update karo
@@ -70,6 +106,18 @@ function updateLineTotal() {
 
   const dealerPrice = product[currentPriceType];
   const purchasePrice = product.pp;
+
+  if (
+    typeof dealerPrice !== "number" ||
+    Number.isNaN(dealerPrice) ||
+    typeof purchasePrice !== "number" ||
+    Number.isNaN(purchasePrice)
+  ) {
+    itemPriceSpan.textContent = "0";
+    salePriceSpan.textContent = "0";
+    marginPercentSpan.textContent = "0";
+    return;
+  }
 
   itemPriceSpan.textContent = dealerPrice.toFixed(2);
 
@@ -104,6 +152,16 @@ function addItem() {
   const dealerPrice = product[currentPriceType];
   const purchasePrice = product.pp;
 
+  if (
+    typeof dealerPrice !== "number" ||
+    Number.isNaN(dealerPrice) ||
+    typeof purchasePrice !== "number" ||
+    Number.isNaN(purchasePrice)
+  ) {
+    alert("Price data available nahi hai.");
+    return;
+  }
+
   // Use custom sale price if entered, else use dealer price
   const finalSalePrice = customSalePrice > 0 ? customSalePrice : dealerPrice;
 
@@ -112,9 +170,9 @@ function addItem() {
 
   // Multi-line format for each item
   const itemBlock = `${product.name}
-MRP: ₹${product.mrp} | Size: ${product.itemSize}
+MRP: Rs.${product.mrp} | Size: ${product.itemSize}
 Order Qty: ${qty} | Margin: ${margin.toFixed(2)}%
-Quote Price: ₹${finalSalePrice.toFixed(2)}`;
+Quote Price: Rs.${finalSalePrice.toFixed(2)}`;
 
   if (orderTextArea.value.trim() !== "") {
     orderTextArea.value += "\n------------------------\n";
@@ -146,7 +204,8 @@ function sendToWhatsApp() {
   finalText += `Customer: ${customerName}\n`;
 
   // Price type display
-  const priceTypeText = priceTypeSelect.options[priceTypeSelect.selectedIndex].text;
+  const priceTypeText =
+    priceTypeSelect.options[priceTypeSelect.selectedIndex].text;
   finalText += `Price Type: ${priceTypeText}\n`;
   finalText += "========================\n\n";
   finalText += text;
@@ -179,4 +238,3 @@ priceTypeSelect.addEventListener("change", changePriceType);
 
 // shuru me products load
 loadProducts();
-

@@ -1,372 +1,1052 @@
 [
-  {
-    "code": "BC001",
-    "name": "BLUECHIP 6ML (VESLINE)",
-    "pp": 2.97,
-    "priceBulk": 3.12,
-    "priceWholesale": 3.18,
-    "priceRetail": 3.267,
-    "mrp": 5,
-    "itemSize": "1CTN=1728 PCS"
-  },
-  {
-    "code": "BC002",
-    "name": "BLUECHIP 12ML (VESLINE)",
-    "pp": 5.95,
-    "priceBulk": 6.25,
-    "priceWholesale": 6.36,
-    "priceRetail": 6.545,
-    "mrp": 10,
-    "itemSize": "1CTN=1152 PCS"
-  },
-  {
-    "code": "BC003",
-    "name": "BLUECHIP 20ML (VESLINE)",
-    "pp": 7.42,
-    "priceBulk": 7.79,
-    "priceWholesale": 7.94,
-    "priceRetail": 8.162,
-    "mrp": 30,
-    "itemSize": "1CTN=576 PCS"
-  },
-  {
-    "code": "BC004",
-    "name": "BLUECHIP 30ML (VESLINE)",
-    "pp": 11.97,
-    "priceBulk": 12.57,
-    "priceWholesale": 12.81,
-    "priceRetail": 13.167,
-    "mrp": 40,
-    "itemSize": "1CTN=432 PCS"
-  },
-  {
-    "code": "BC005",
-    "name": "BLUECHIP 40ML (VESLINE)",
-    "pp": 13.84,
-    "priceBulk": 14.53,
-    "priceWholesale": 14.81,
-    "priceRetail": 15.224,
-    "mrp": 50,
-    "itemSize": "1CTN=432 PCS"
-  },
-  {
-    "code": "BC006",
-    "name": "BLUECHIP 50ML (VESLINE)",
-    "pp": 18.85,
-    "priceBulk": 19.79,
-    "priceWholesale": 20.16,
-    "priceRetail": 20.735,
-    "mrp": 70,
-    "itemSize": "1CTN=288 PCS"
-  },
-  {
-    "code": "BC007",
-    "name": "BLUECHIP 100ML (VESLINE)",
-    "pp": 39.59,
-    "priceBulk": 41.57,
-    "priceWholesale": 42.36,
-    "priceRetail": 43.549,
-    "mrp": 120,
-    "itemSize": "1CTN=144 PCS"
-  },
-  {
-    "code": "BC008",
-    "name": "BLUECHIP 220ML (VESLINE)",
-    "pp": 84.18,
-    "priceBulk": 88.39,
-    "priceWholesale": 90.07,
-    "priceRetail": 92.598,
-    "mrp": 300,
-    "itemSize": "1CTN=72 PCS"
-  },
-  {
-    "code": "BC009",
-    "name": "BLUECHIP REO 25GM (VESLINE)",
-    "pp": 13.33,
-    "priceBulk": 14.00,
-    "priceWholesale": 14.26,
-    "priceRetail": 14.663,
-    "mrp": 50,
-    "itemSize": "1CTN=432 PCS"
-  },
-  {
-    "code": "BC010",
-    "name": "BLUECHIP REO 48GM (VESLINE)",
-    "pp": 22.23,
-    "priceBulk": 23.34,
-    "priceWholesale": 23.78,
-    "priceRetail": 24.453,
-    "mrp": 80,
-    "itemSize": "1CTN=288 PCS"
-  },
-  {
-    "code": "BC011",
-    "name": "BLUECHIP REO 90GM (VESLINE)",
-    "pp": 39.59,
-    "priceBulk": 41.57,
-    "priceWholesale": 42.36,
-    "priceRetail": 43.549,
-    "mrp": 150,
-    "itemSize": "1CTN=144 PCS"
-  },
-  {
-    "code": "BC012",
-    "name": "BLUECHIP REO 175GM (VESLINE)",
-    "pp": 74.25,
-    "priceBulk": 77.96,
-    "priceWholesale": 79.45,
-    "priceRetail": 81.675,
-    "mrp": 300,
-    "itemSize": "1CTN=72 PCS"
-  },
-  {
-    "code": "BC013",
-    "name": "BLUECHIP STRWABERRY 7ML (LIPBAM)",
-    "pp": 6.20,
-    "priceBulk": 6.51,
-    "priceWholesale": 6.63,
-    "priceRetail": 6.82,
-    "mrp": 10,
-    "itemSize": "1CTN=720 PCS"
-  },
-  {
-    "code": "BC014",
-    "name": "BLUECHIP STRWABERRY TUBE 7ML",
-    "pp": 7.01,
-    "priceBulk": 7.36,
-    "priceWholesale": 7.50,
-    "priceRetail": 7.711,
-    "mrp": 15,
-    "itemSize": "1CTN=768 PCS"
-  },
-  {
-    "code": "BC015",
-    "name": "BLUECHIP 20ML (BODYLOTION)",
-    "pp": 5.36,
-    "priceBulk": 5.63,
-    "priceWholesale": 5.74,
-    "priceRetail": 5.896,
-    "mrp": 10,
-    "itemSize": "1CTN=480 PCS"
-  },
-  {
-    "code": "BC016",
-    "name": "BLUECHIP 40ML (BODYLOTION)",
-    "pp": 10.57,
-    "priceBulk": 11.10,
-    "priceWholesale": 11.31,
-    "priceRetail": 11.627,
-    "mrp": 25,
-    "itemSize": "1CTN=384 PCS"
-  },
-  {
-    "code": "BC017",
-    "name": "BLUECHIP ALMOND 100ML",
-    "pp": 28.04,
-    "priceBulk": 29.44,
-    "priceWholesale": 30.00,
-    "priceRetail": 30.844,
-    "mrp": 75,
-    "itemSize": "1CTN=72 PCS"
-  },
-  {
-    "code": "BC018",
-    "name": "BLUECHIP APPLE PEACH 100ML",
-    "pp": 28.04,
-    "priceBulk": 29.44,
-    "priceWholesale": 30.00,
-    "priceRetail": 30.844,
-    "mrp": 75,
-    "itemSize": "1CTN=72 PCS"
-  },
-  {
-    "code": "BC019",
-    "name": "BLUECHIP ROSE 100ML (BODYLOTION)",
-    "pp": 28.04,
-    "priceBulk": 29.44,
-    "priceWholesale": 30.00,
-    "priceRetail": 30.844,
-    "mrp": 75,
-    "itemSize": "1CTN=72 PCS"
-  },
-  {
-    "code": "BC020",
-    "name": "BLUECHIP ALOEVERA 100ML",
-    "pp": 28.04,
-    "priceBulk": 29.44,
-    "priceWholesale": 30.00,
-    "priceRetail": 30.844,
-    "mrp": 75,
-    "itemSize": "1CTN=72 PCS"
-  },
-  {
-    "code": "BC021",
-    "name": "BLUECHIP ALMOND 300ML",
-    "pp": 61.69,
-    "priceBulk": 64.77,
-    "priceWholesale": 66.01,
-    "priceRetail": 67.859,
-    "mrp": 150,
-    "itemSize": "1CTN=36 PCS"
-  },
-  {
-    "code": "BC022",
-    "name": "BLUECHIP APPLE PEACH 300ML",
-    "pp": 61.69,
-    "priceBulk": 64.77,
-    "priceWholesale": 66.01,
-    "priceRetail": 67.859,
-    "mrp": 150,
-    "itemSize": "1CTN=36 PCS"
-  },
-  {
-    "code": "BC023",
-    "name": "BLUECHIP ROSE 300ML (BODYLOTION)",
-    "pp": 61.69,
-    "priceBulk": 64.77,
-    "priceWholesale": 66.01,
-    "priceRetail": 67.859,
-    "mrp": 150,
-    "itemSize": "1CTN=36 PCS"
-  },
-  {
-    "code": "BC024",
-    "name": "BLUECHIP ALOE VERA 300ML",
-    "pp": 61.69,
-    "priceBulk": 64.77,
-    "priceWholesale": 66.01,
-    "priceRetail": 67.859,
-    "mrp": 150,
-    "itemSize": "1CTN=36 PCS"
-  },
-  {
-    "code": "BC025",
-    "name": "BLUECHIP ALMOND 500ML",
-    "pp": 93.47,
-    "priceBulk": 98.14,
-    "priceWholesale": 100.01,
-    "priceRetail": 102.817,
-    "mrp": 250,
-    "itemSize": "1CTN=24 PCS"
-  },
-  {
-    "code": "BC026",
-    "name": "BLUECHIP APPLE PEACH 500ML",
-    "pp": 93.47,
-    "priceBulk": 98.14,
-    "priceWholesale": 100.01,
-    "priceRetail": 102.817,
-    "mrp": 250,
-    "itemSize": "1CTN=24 PCS"
-  },
-  {
-    "code": "BC027",
-    "name": "BLUECHIP ROSE 500ML (BODYLOTION)",
-    "pp": 93.47,
-    "priceBulk": 98.14,
-    "priceWholesale": 100.01,
-    "priceRetail": 102.817,
-    "mrp": 250,
-    "itemSize": "1CTN=24 PCS"
-  },
-  {
-    "code": "BC028",
-    "name": "BLUECHIP ALOEVERA 500ML",
-    "pp": 93.47,
-    "priceBulk": 98.14,
-    "priceWholesale": 100.01,
-    "priceRetail": 102.817,
-    "mrp": 250,
-    "itemSize": "1CTN=24 PCS"
-  },
-  {
-    "code": "BC029",
-    "name": "BLUECHIP (MIX) 300ML (BODYLOTION)",
-    "pp": 61.69,
-    "priceBulk": 64.77,
-    "priceWholesale": 66.01,
-    "priceRetail": 67.859,
-    "mrp": 150,
-    "itemSize": "1CTN=36 PCS"
-  },
-  {
-    "code": "BC030",
-    "name": "BLUECHIP (MIX) 500ML (BODYLOTION)",
-    "pp": 93.47,
-    "priceBulk": 98.14,
-    "priceWholesale": 100.01,
-    "priceRetail": 102.817,
-    "mrp": 250,
-    "itemSize": "1CTN=24 PCS"
-  },
-  {
-    "code": "BC031",
-    "name": "BB FACE TALC 12GM (POWDER)",
-    "pp": 5.25,
-    "priceBulk": 5.51,
-    "priceWholesale": 5.62,
-    "priceRetail": 5.775,
-    "mrp": 10,
-    "itemSize": "1CTN=480 PCS"
-  },
-  {
-    "code": "BC032",
-    "name": "BLUECHIP AYURVEDIC 50ML (VESLINE)",
-    "pp": 20.87,
-    "priceBulk": 21.91,
-    "priceWholesale": 22.33,
-    "priceRetail": 22.957,
-    "mrp": 65,
-    "itemSize": "1CTN=288 PCS"
-  },
-  {
-    "code": "BC033",
-    "name": "BLUECHIP 30ML (GULABJAL)",
-    "pp": 5.85,
-    "priceBulk": 6.14,
-    "priceWholesale": 6.26,
-    "priceRetail": 6.435,
-    "mrp": 10,
-    "itemSize": "1CTN=576 PCS"
-  },
-  {
-    "code": "BC034",
-    "name": "BLUECHIP 60ML (GULABJAL)",
-    "pp": 9.83,
-    "priceBulk": 10.32,
-    "priceWholesale": 10.51,
-    "priceRetail": 10.813,
-    "mrp": 25,
-    "itemSize": "1CTN=240 PCS"
-  },
-  {
-    "code": "BC035",
-    "name": "BLUECHIP 120ML (GULABJAL)",
-    "pp": 17.30,
-    "priceBulk": 18.17,
-    "priceWholesale": 18.51,
-    "priceRetail": 19.03,
-    "mrp": 50,
-    "itemSize": "1CTN=120 PCS"
-  },
-  {
-    "code": "BC036",
-    "name": "BLUECHIP 250ML (GULABJAL)",
-    "pp": 32.72,
-    "priceBulk": 34.36,
-    "priceWholesale": 35.01,
-    "priceRetail": 35.992,
-    "mrp": 90,
-    "itemSize": "1CTN=72 PCS"
-  },
-  {
-    "code": "BC037",
-    "name": "BLUECHIP ROZY MIST (GULABJAL)",
-    "pp": 27.83,
-    "priceBulk": 29.22,
-    "priceWholesale": 29.78,
-    "priceRetail": 30.613,
-    "mrp": 80,
-    "itemSize": "1CTN-120PCS"
-  }
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCLDG30",
+        "item_name":  "BRILLIANTINE LAVENDER - (GREEN)-35 ML",
+        "mrp":  60,
+        "pcs_ctn":  432,
+        "Purc_price":  16.5,
+        "db_to_ws_pcs_price":  17.66,
+        "db_to_retail_pcs_price":  18.15
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCLDG90",
+        "item_name":  "BRILLIANTINE LAVENDER - (GREEN)-90 ML",
+        "mrp":  120,
+        "pcs_ctn":  144,
+        "Purc_price":  34.67,
+        "DB TO WS (7%)":  37.09,
+        "db_to_retail_pcs_price":  38.14
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCPPG30",
+        "item_name":  "BRILLIANTINE PLASTIC POT - (GREEN)-30 ML",
+        "mrp":  50,
+        "pcs_ctn":  432,
+        "Purc_price":  13.84,
+        "db_to_ws_pcs_price":  14.81,
+        "db_to_retail_pcs_price":  15.22
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCPPG60",
+        "item_name":  "BRILLIANTINE PLASTIC POT - (GREEN)-60 ML",
+        "mrp":  90,
+        "pcs_ctn":  216,
+        "Purc_price":  24.76,
+        "db_to_ws_pcs_price":  26.49,
+        "db_to_retail_pcs_price":  27.24
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCPJ006",
+        "item_name":  "WHITE PETROLEUM JELLY-6 ML",
+        "mrp":  5,
+        "pcs_ctn":  1728,
+        "Purc_price":  2.97,
+        "db_to_ws_pcs_price":  3.18,
+        "db_to_retail_pcs_price":  3.27
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCPJ012",
+        "item_name":  "WHITE PETROLEUM JELLY-12 ML",
+        "mrp":  10,
+        "pcs_ctn":  1152,
+        "Purc_price":  5.95,
+        "db_to_ws_pcs_price":  6.36,
+        "db_to_retail_pcs_price":  6.54
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCPJ020",
+        "item_name":  "WHITE PETROLEUM JELLY-20 ML",
+        "mrp":  30,
+        "pcs_ctn":  576,
+        "Purc_price":  7.42,
+        "db_to_ws_pcs_price":  7.94,
+        "db_to_retail_pcs_price":  8.16
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BLPJ030",
+        "item_name":  "WHITE PETROLEUM JELLY-30 ML",
+        "mrp":  40,
+        "pcs_ctn":  432,
+        "Purc_price":  11.97,
+        "db_to_ws_pcs_price":  12.81,
+        "db_to_retail_pcs_price":  13.17
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCPJW40",
+        "item_name":  "WHITE PETROLEUM JELLY-40 ML",
+        "mrp":  50,
+        "pcs_ctn":  432,
+        "Purc_price":  13.84,
+        "db_to_ws_pcs_price":  14.81,
+        "db_to_retail_pcs_price":  15.22
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCPJW50",
+        "item_name":  "WHITE PETROLEUM JELLY-50 ML",
+        "mrp":  70,
+        "pcs_ctn":  288,
+        "Purc_price":  18.85,
+        "db_to_ws_pcs_price":  20.16,
+        "db_to_retail_pcs_price":  20.74
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCPJ100",
+        "item_name":  "WHITE PETROLEUM JELLY-100 ML",
+        "mrp":  120,
+        "pcs_ctn":  144,
+        "Purc_price":  39.59,
+        "db_to_ws_pcs_price":  42.36,
+        "db_to_retail_pcs_price":  43.55
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCPJ220",
+        "item_name":  "WHITE PETROLEUM JELLY-220 ML",
+        "mrp":  300,
+        "pcs_ctn":  72,
+        "Purc_price":  84.18,
+        "db_to_ws_pcs_price":  90.07,
+        "db_to_retail_pcs_price":  92.60
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCPL055",
+        "item_name":  "PILA 50 ML",
+        "mrp":  70,
+        "pcs_ctn":  288,
+        "Purc_price":  18.77,
+        "db_to_ws_pcs_price":  20.08,
+        "db_to_retail_pcs_price":  20.65
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCLP025",
+        "item_name":  "REO 25 GM",
+        "mrp":  50,
+        "pcs_ctn":  432,
+        "Purc_price":  13.33,
+        "db_to_ws_pcs_price":  14.26,
+        "db_to_retail_pcs_price":  14.66
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCLP048",
+        "item_name":  "REO 48 GM",
+        "mrp":  80,
+        "pcs_ctn":  288,
+        "Purc_price":  22.23,
+        "db_to_ws_pcs_price":  23.78,
+        "db_to_retail_pcs_price":  24.45
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCLP090",
+        "item_name":  "REO 90 GM",
+        "mrp":  150,
+        "pcs_ctn":  144,
+        "Purc_price":  39.59,
+        "db_to_ws_pcs_price":  42.36,
+        "db_to_retail_pcs_price":  43.55
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCLP175",
+        "item_name":  "REO 175 GM",
+        "mrp":  300,
+        "pcs_ctn":  72,
+        "Purc_price":  74.25,
+        "db_to_ws_pcs_price":  79.45,
+        "db_to_retail_pcs_price":  81.68
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCPM050",
+        "item_name":  "POMADE JELLY-50 ML",
+        "mrp":  50,
+        "pcs_ctn":  288,
+        "Purc_price":  16.34,
+        "db_to_ws_pcs_price":  17.49,
+        "db_to_retail_pcs_price":  17.97
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "NCBC070",
+        "item_name":  "Ezra-70 GM",
+        "mrp":  60,
+        "pcs_ctn":  216,
+        "Purc_price":  14.17,
+        "db_to_ws_pcs_price":  15.17,
+        "db_to_retail_pcs_price":  15.59
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "NCFE050",
+        "item_name":  "NONIE FAMOUS EVER-70 GM",
+        "mrp":  55,
+        "pcs_ctn":  216,
+        "Purc_price":  12.84,
+        "db_to_ws_pcs_price":  13.73,
+        "db_to_retail_pcs_price":  14.12
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "NCLT050",
+        "item_name":  "NONIE LEMON ( 2 IN 1 )- 60 GM",
+        "mrp":  65,
+        "pcs_ctn":  144,
+        "Purc_price":  18.67,
+        "db_to_ws_pcs_price":  19.98,
+        "db_to_retail_pcs_price":  20.54
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "NCL0090",
+        "item_name":  "NONIE LEMON ( 2000 )-80 GM",
+        "mrp":  50,
+        "pcs_ctn":  216,
+        "Purc_price":  11.84,
+        "db_to_ws_pcs_price":  12.67,
+        "db_to_retail_pcs_price":  13.02
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "NCLPT50",
+        "item_name":  "NONIE LOVELY ( 2 IN 1 )PINK-60 GM",
+        "mrp":  65,
+        "pcs_ctn":  144,
+        "Purc_price":  18.67,
+        "db_to_ws_pcs_price":  19.98,
+        "db_to_retail_pcs_price":  20.54
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "NCSF070",
+        "item_name":  "SAFFRON CREAM-70 GM",
+        "mrp":  80,
+        "pcs_ctn":  216,
+        "Purc_price":  21.51,
+        "db_to_ws_pcs_price":  23.01,
+        "db_to_retail_pcs_price":  23.66
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "NCRS070",
+        "item_name":  "ROSE CREAM-70 GM",
+        "mrp":  80,
+        "pcs_ctn":  216,
+        "Purc_price":  21.51,
+        "db_to_ws_pcs_price":  23.01,
+        "db_to_retail_pcs_price":  23.66
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "NCAV070",
+        "item_name":  "ALOE VERA CREAM-70 GM",
+        "mrp":  80,
+        "pcs_ctn":  216,
+        "Purc_price":  21.51,
+        "db_to_ws_pcs_price":  23.01,
+        "db_to_retail_pcs_price":  23.66
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "NCTM070",
+        "item_name":  "TURMERIC CREAM-70 GM",
+        "mrp":  80,
+        "pcs_ctn":  216,
+        "Purc_price":  21.51,
+        "db_to_ws_pcs_price":  23.01,
+        "db_to_retail_pcs_price":  23.66
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "NCMX070",
+        "item_name":  "CO-SKIN MIX CREAM-70 GM",
+        "mrp":  80,
+        "pcs_ctn":  216,
+        "Purc_price":  21.51,
+        "db_to_ws_pcs_price":  23.01,
+        "db_to_retail_pcs_price":  23.66
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTCC025",
+        "item_name":  "( COOL - COOL )-25 GM Jar",
+        "mrp":  10,
+        "pcs_ctn":  384,
+        "Purc_price":  5.08,
+        "db_to_ws_pcs_price":  5.44,
+        "db_to_retail_pcs_price":  5.59
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTSB025",
+        "item_name":  "Sandal Bliss-25 GM",
+        "mrp":  10,
+        "pcs_ctn":  384,
+        "Purc_price":  5.08,
+        "db_to_ws_pcs_price":  5.44,
+        "db_to_retail_pcs_price":  5.59
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTLM025",
+        "item_name":  "Lavender Mist-25 GM Jar",
+        "mrp":  10,
+        "pcs_ctn":  384,
+        "Purc_price":  5.08,
+        "db_to_ws_pcs_price":  5.44,
+        "db_to_retail_pcs_price":  5.59
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTLM067",
+        "item_name":  "Lavender Mist-67 GM",
+        "mrp":  50,
+        "pcs_ctn":  216,
+        "Purc_price":  11.64,
+        "db_to_ws_pcs_price":  12.46,
+        "db_to_retail_pcs_price":  12.80
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTLM133",
+        "item_name":  "Lavender Mist-133 GM",
+        "mrp":  85,
+        "pcs_ctn":  144,
+        "Purc_price":  21.13,
+        "db_to_ws_pcs_price":  22.61,
+        "db_to_retail_pcs_price":  23.24
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTLM400",
+        "item_name":  "Lavender Mist-400 GM",
+        "mrp":  195,
+        "pcs_ctn":  48,
+        "Purc_price":  50.73,
+        "db_to_ws_pcs_price":  54.28,
+        "db_to_retail_pcs_price":  55.80
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTFB025",
+        "item_name":  "Floral Bloom-25 GM Jar",
+        "mrp":  10,
+        "pcs_ctn":  384,
+        "Purc_price":  5.08,
+        "db_to_ws_pcs_price":  5.44,
+        "db_to_retail_pcs_price":  5.59
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTFB067",
+        "item_name":  "Floral Bloom-67 GM",
+        "mrp":  50,
+        "pcs_ctn":  216,
+        "Purc_price":  11.64,
+        "db_to_ws_pcs_price":  12.46,
+        "db_to_retail_pcs_price":  12.80
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTFB133",
+        "item_name":  "Floral Bloom-133 GM",
+        "mrp":  85,
+        "pcs_ctn":  144,
+        "Purc_price":  21.13,
+        "db_to_ws_pcs_price":  22.61,
+        "db_to_retail_pcs_price":  23.24
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTFB400",
+        "item_name":  "Floral Bloom-400 GM",
+        "mrp":  195,
+        "pcs_ctn":  48,
+        "Purc_price":  50.73,
+        "db_to_ws_pcs_price":  54.28,
+        "db_to_retail_pcs_price":  55.80
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTAF100",
+        "item_name":  "ATTARFUL-100 GM",
+        "mrp":  45,
+        "pcs_ctn":  144,
+        "Purc_price":  14.24,
+        "db_to_ws_pcs_price":  15.24,
+        "db_to_retail_pcs_price":  15.66
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTAF300",
+        "item_name":  "ATTARFUL-300 GM",
+        "mrp":  105,
+        "pcs_ctn":  60,
+        "Purc_price":  34.63,
+        "db_to_ws_pcs_price":  37.05,
+        "db_to_retail_pcs_price":  38.09
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTDN100",
+        "item_name":  "DENIUM TYPE-100 GM",
+        "mrp":  45,
+        "pcs_ctn":  144,
+        "Purc_price":  14.91,
+        "db_to_ws_pcs_price":  15.95,
+        "db_to_retail_pcs_price":  16.40
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTIC300",
+        "item_name":  "ICE COOL-300 GM",
+        "mrp":  105,
+        "pcs_ctn":  60,
+        "Purc_price":  34.63,
+        "db_to_ws_pcs_price":  37.05,
+        "db_to_retail_pcs_price":  38.09
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTMX300",
+        "item_name":  "MIX-300 GM",
+        "mrp":  105,
+        "pcs_ctn":  60,
+        "Purc_price":  34.63,
+        "db_to_ws_pcs_price":  37.05,
+        "db_to_retail_pcs_price":  38.09
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTRO300",
+        "item_name":  "ROSE-300 GM",
+        "mrp":  105,
+        "pcs_ctn":  60,
+        "Purc_price":  34.63,
+        "db_to_ws_pcs_price":  37.05,
+        "db_to_retail_pcs_price":  38.09
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTSD300",
+        "item_name":  "SANDAL-300 GM",
+        "mrp":  105,
+        "pcs_ctn":  60,
+        "Purc_price":  34.63,
+        "db_to_ws_pcs_price":  37.05,
+        "db_to_retail_pcs_price":  38.09
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTCC300",
+        "item_name":  "( COOL - COOL )-300 GM",
+        "mrp":  105,
+        "pcs_ctn":  60,
+        "Purc_price":  34.63,
+        "db_to_ws_pcs_price":  37.05,
+        "db_to_retail_pcs_price":  38.09
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTCC075",
+        "item_name":  "( COOL - COOL )-75 GM",
+        "mrp":  40,
+        "pcs_ctn":  216,
+        "Purc_price":  10.98,
+        "db_to_ws_pcs_price":  11.75,
+        "db_to_retail_pcs_price":  12.08
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTCC150",
+        "item_name":  "( COOL - COOL )-150 GM",
+        "mrp":  60,
+        "pcs_ctn":  108,
+        "Purc_price":  16.44,
+        "db_to_ws_pcs_price":  17.59,
+        "db_to_retail_pcs_price":  18.08
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTAF025",
+        "item_name":  "ATTARFUL-25 GM",
+        "mrp":  25,
+        "pcs_ctn":  396,
+        "Purc_price":  6.33,
+        "db_to_ws_pcs_price":  6.77,
+        "db_to_retail_pcs_price":  6.96
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTAF050",
+        "item_name":  "ATTARFUL-50 GM",
+        "mrp":  40,
+        "pcs_ctn":  216,
+        "Purc_price":  9.07,
+        "db_to_ws_pcs_price":  9.71,
+        "db_to_retail_pcs_price":  9.98
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTMBT90",
+        "item_name":  "MEHTA BABY TALC-90 GM",
+        "mrp":  35,
+        "pcs_ctn":  216,
+        "Purc_price":  10.12,
+        "db_to_ws_pcs_price":  10.83,
+        "db_to_retail_pcs_price":  11.13
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTBC325",
+        "item_name":  "PRIYA BLUE CAP TALC ( BIG )-300 GM",
+        "mrp":  105,
+        "pcs_ctn":  60,
+        "Purc_price":  26.14,
+        "db_to_ws_pcs_price":  27.97,
+        "db_to_retail_pcs_price":  28.75
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "NTBC100",
+        "item_name":  "PRIYA BLUE CAP TALC ( SMALL)-100 GM",
+        "mrp":  45,
+        "pcs_ctn":  108,
+        "Purc_price":  10.97,
+        "db_to_ws_pcs_price":  11.74,
+        "db_to_retail_pcs_price":  12.07
+    },
+    {
+        "category":  "Lip Balm",
+        "code":  "BCLB012",
+        "item_name":  "LIP BALM - (BLUE)-12 GM",
+        "mrp":  25,
+        "pcs_ctn":  400,
+        "Purc_price":  10.87,
+        "db_to_ws_pcs_price":  11.63,
+        "db_to_retail_pcs_price":  11.96
+    },
+    {
+        "category":  "Lip Balm",
+        "code":  "BCLR012",
+        "item_name":  "LIP BALM - (RED)-12 GM",
+        "mrp":  25,
+        "pcs_ctn":  400,
+        "Purc_price":  10.87,
+        "db_to_ws_pcs_price":  11.63,
+        "db_to_retail_pcs_price":  11.96
+    },
+    {
+        "category":  "Lip Balm",
+        "code":  "BCLBJ12",
+        "item_name":  "LIP BALM JAR - (BLUE)-12 GM",
+        "mrp":  25,
+        "pcs_ctn":  600,
+        "Purc_price":  10.87,
+        "db_to_ws_pcs_price":  11.63,
+        "db_to_retail_pcs_price":  11.96
+    },
+    {
+        "category":  "Lip Balm",
+        "code":  "BCLRJ12",
+        "item_name":  "LIP BALM JAR - (RED)-12 GM",
+        "mrp":  25,
+        "pcs_ctn":  600,
+        "Purc_price":  10.87,
+        "db_to_ws_pcs_price":  11.63,
+        "db_to_retail_pcs_price":  11.96
+    },
+    {
+        "category":  "Lip Balm",
+        "code":  "LPFSP10",
+        "item_name":  "LIP BALM FLOWER STRAWBERRY PUNCH-10 ML",
+        "mrp":  30,
+        "pcs_ctn":  576,
+        "Purc_price":  13.34,
+        "db_to_ws_pcs_price":  14.28,
+        "db_to_retail_pcs_price":  14.67
+    },
+    {
+        "category":  "Lip Balm",
+        "code":  "LPFMX10",
+        "item_name":  "LIP BALM FLOWER MIX PUNCH-10 ML",
+        "mrp":  30,
+        "pcs_ctn":  576,
+        "Purc_price":  13.34,
+        "db_to_ws_pcs_price":  14.28,
+        "db_to_retail_pcs_price":  14.67
+    },
+    {
+        "category":  "Lip Balm",
+        "code":  "BCLBS07",
+        "item_name":  "LIP BALM STRAWBERRY-7 ML",
+        "mrp":  10,
+        "pcs_ctn":  720,
+        "Purc_price":  6.2,
+        "db_to_ws_pcs_price":  6.63,
+        "db_to_retail_pcs_price":  6.82
+    },
+    {
+        "category":  "Lip Balm",
+        "code":  "BCLST07",
+        "item_name":  "LIP BALM STRAWBERRY TUBE-7 ML",
+        "mrp":  15,
+        "pcs_ctn":  768,
+        "Purc_price":  7.01,
+        "db_to_ws_pcs_price":  7.5,
+        "db_to_retail_pcs_price":  7.71
+    },
+    {
+        "category":  "Lip Balm",
+        "code":  "LPBOSP5",
+        "item_name":  "LIP BALM OVAL STRAWBERRY PUNCH-5 ML",
+        "mrp":  20,
+        "pcs_ctn":  720,
+        "Purc_price":  8.43,
+        "db_to_ws_pcs_price":  9.01,
+        "db_to_retail_pcs_price":  9.27
+    },
+    {
+        "category":  "Lip Balm",
+        "code":  "LPBOMX5",
+        "item_name":  "LIP BALM OVAL MIX-5 ML",
+        "mrp":  20,
+        "pcs_ctn":  720,
+        "Purc_price":  8.43,
+        "db_to_ws_pcs_price":  9.01,
+        "db_to_retail_pcs_price":  9.27
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLAC020",
+        "item_name":  "LOTION ALMOND (YELLOW)-20 ML",
+        "mrp":  10,
+        "pcs_ctn":  480,
+        "Purc_price":  5.36,
+        "db_to_ws_pcs_price":  5.74,
+        "db_to_retail_pcs_price":  5.90
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLAC040",
+        "item_name":  "LOTION ALMOND (YELLOW)-40 ML",
+        "mrp":  25,
+        "pcs_ctn":  384,
+        "Purc_price":  10.57,
+        "db_to_ws_pcs_price":  11.31,
+        "db_to_retail_pcs_price":  11.63
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLAC100",
+        "item_name":  "LOTION ALMOND (YELLOW)-100 ML",
+        "mrp":  75,
+        "pcs_ctn":  72,
+        "Purc_price":  28.04,
+        "db_to_ws_pcs_price":  30,
+        "db_to_retail_pcs_price":  30.84
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLAP100",
+        "item_name":  "LOTION APPLE PEACH (RED)-100 ML",
+        "mrp":  75,
+        "pcs_ctn":  72,
+        "Purc_price":  28.04,
+        "db_to_ws_pcs_price":  30,
+        "db_to_retail_pcs_price":  30.84
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLRV100",
+        "item_name":  "LOTION ROSE (PINK)-100 ML",
+        "mrp":  75,
+        "pcs_ctn":  72,
+        "Purc_price":  28.04,
+        "db_to_ws_pcs_price":  30,
+        "db_to_retail_pcs_price":  30.84
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLVC100",
+        "item_name":  "LOTION ALOE VERA (GREEN)-100 ML",
+        "mrp":  75,
+        "pcs_ctn":  72,
+        "Purc_price":  28.04,
+        "db_to_ws_pcs_price":  30,
+        "db_to_retail_pcs_price":  30.84
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLAC300",
+        "item_name":  "LOTION (ALMOND)-300 ML",
+        "mrp":  150,
+        "pcs_ctn":  36,
+        "Purc_price":  61.69,
+        "db_to_ws_pcs_price":  66.01,
+        "db_to_retail_pcs_price":  67.86
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLAP300",
+        "item_name":  "LOTION (APPLE PEACH)-300 ML",
+        "mrp":  150,
+        "pcs_ctn":  36,
+        "Purc_price":  61.69,
+        "db_to_ws_pcs_price":  66.01,
+        "db_to_retail_pcs_price":  67.86
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLRV300",
+        "item_name":  "LOTION (ROSE)-300 ML",
+        "mrp":  150,
+        "pcs_ctn":  36,
+        "Purc_price":  61.69,
+        "db_to_ws_pcs_price":  66.01,
+        "db_to_retail_pcs_price":  67.86
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLVC300",
+        "item_name":  "LOTION (ALOE VERA)-300 ML",
+        "mrp":  150,
+        "pcs_ctn":  36,
+        "Purc_price":  61.69,
+        "db_to_ws_pcs_price":  66.01,
+        "db_to_retail_pcs_price":  67.86
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLAC500",
+        "item_name":  "LOTION (ALMOND)-500 ML",
+        "mrp":  250,
+        "pcs_ctn":  24,
+        "Purc_price":  93.47,
+        "db_to_ws_pcs_price":  100.01,
+        "db_to_retail_pcs_price":  102.82
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLAP500",
+        "item_name":  "LOTION (APPLE PEACH)-500 ML",
+        "mrp":  250,
+        "pcs_ctn":  24,
+        "Purc_price":  93.47,
+        "db_to_ws_pcs_price":  100.01,
+        "db_to_retail_pcs_price":  102.82
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLRV500",
+        "item_name":  "LOTION (ROSE)-500 ML",
+        "mrp":  250,
+        "pcs_ctn":  24,
+        "Purc_price":  93.47,
+        "db_to_ws_pcs_price":  100.01,
+        "db_to_retail_pcs_price":  102.82
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLVC500",
+        "item_name":  "LOTION (ALOE VERA)-500 ML",
+        "mrp":  250,
+        "pcs_ctn":  24,
+        "Purc_price":  93.47,
+        "db_to_ws_pcs_price":  100.01,
+        "db_to_retail_pcs_price":  102.82
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLMX300",
+        "item_name":  "LOTION (MIX)-300 ML",
+        "mrp":  150,
+        "pcs_ctn":  36,
+        "Purc_price":  61.69,
+        "db_to_ws_pcs_price":  66.01,
+        "db_to_retail_pcs_price":  67.86
+    },
+    {
+        "category":  "Body Lotion",
+        "code":  "BLMX500",
+        "item_name":  "LOTION (MIX)-500 ML",
+        "mrp":  250,
+        "pcs_ctn":  24,
+        "Purc_price":  93.47,
+        "db_to_ws_pcs_price":  100.01,
+        "db_to_retail_pcs_price":  102.82
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "HRCR025",
+        "item_name":  "HRC ROSE-25 GM",
+        "mrp":  60,
+        "pcs_ctn":  288,
+        "Purc_price":  12.6,
+        "db_to_ws_pcs_price":  13.48,
+        "db_to_retail_pcs_price":  13.86
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "HRCR050",
+        "item_name":  "HRC ROSE-50 GM",
+        "mrp":  100,
+        "pcs_ctn":  216,
+        "Purc_price":  18.7,
+        "db_to_ws_pcs_price":  20.01,
+        "db_to_retail_pcs_price":  20.57
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "HRCA025",
+        "item_name":  "HRC ALOEVERA-25 GM",
+        "mrp":  60,
+        "pcs_ctn":  288,
+        "Purc_price":  12.6,
+        "db_to_ws_pcs_price":  13.48,
+        "db_to_retail_pcs_price":  13.86
+    },
+    {
+        "category":  "Nonie Cream",
+        "code":  "HRCA050",
+        "item_name":  "HRC ALOEVERA-50 GM",
+        "mrp":  100,
+        "pcs_ctn":  216,
+        "Purc_price":  18.7,
+        "db_to_ws_pcs_price":  20.01,
+        "db_to_retail_pcs_price":  20.57
+    },
+    {
+        "category":  "Rose Toner",
+        "code":  "BCRM120",
+        "item_name":  "ROSY MIST TONER-120 ML",
+        "mrp":  80,
+        "pcs_ctn":  120,
+        "Purc_price":  27.83,
+        "db_to_ws_pcs_price":  29.78,
+        "db_to_retail_pcs_price":  30.61
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "BCBB012",
+        "item_name":  "BB FACE TALC-12 GM",
+        "mrp":  10,
+        "pcs_ctn":  480,
+        "Purc_price":  5.25,
+        "db_to_ws_pcs_price":  5.62,
+        "db_to_retail_pcs_price":  5.78
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCHR014",
+        "item_name":  "AYURVEDIC JELLY-14 ML",
+        "mrp":  10,
+        "pcs_ctn":  864,
+        "Purc_price":  5.61,
+        "db_to_ws_pcs_price":  6,
+        "db_to_retail_pcs_price":  6.17
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCHR030",
+        "item_name":  "AYURVEDIC JELLY-30 ML",
+        "mrp":  35,
+        "pcs_ctn":  432,
+        "Purc_price":  12.5,
+        "db_to_ws_pcs_price":  13.38,
+        "db_to_retail_pcs_price":  13.75
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCHR050",
+        "item_name":  "AYURVEDIC JELLY-50 ML",
+        "mrp":  65,
+        "pcs_ctn":  288,
+        "Purc_price":  20.87,
+        "db_to_ws_pcs_price":  22.33,
+        "db_to_retail_pcs_price":  22.96
+    },
+    {
+        "category":  "Petroleum Jelly",
+        "code":  "BCHR100",
+        "item_name":  "AYURVEDIC JELLY-100 ML",
+        "mrp":  110,
+        "pcs_ctn":  144,
+        "Purc_price":  37.11,
+        "db_to_ws_pcs_price":  39.71,
+        "db_to_retail_pcs_price":  40.82
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "BCAD150",
+        "item_name":  "ACTIVE DEO COOL TALC-150 GM",
+        "mrp":  85,
+        "pcs_ctn":  96,
+        "Purc_price":  30.66,
+        "db_to_ws_pcs_price":  32.81,
+        "db_to_retail_pcs_price":  33.73
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "BCMF150",
+        "item_name":  "MINT FRESH COOL TALC-150 GM",
+        "mrp":  85,
+        "pcs_ctn":  96,
+        "Purc_price":  30.66,
+        "db_to_ws_pcs_price":  32.81,
+        "db_to_retail_pcs_price":  33.73
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "BCAD100",
+        "item_name":  "ACTIVE DEO COOL TALC-100 GM",
+        "mrp":  60,
+        "pcs_ctn":  144,
+        "Purc_price":  22.65,
+        "db_to_ws_pcs_price":  24.23,
+        "db_to_retail_pcs_price":  24.92
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "BCMF100",
+        "item_name":  "MINT FRESH COOL TALC-100 GM",
+        "mrp":  60,
+        "pcs_ctn":  144,
+        "Purc_price":  22.65,
+        "db_to_ws_pcs_price":  24.23,
+        "db_to_retail_pcs_price":  24.92
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "BCAD050",
+        "item_name":  "ACTIVE DEO COOL TALC-50 GM",
+        "mrp":  35,
+        "pcs_ctn":  288,
+        "Purc_price":  12.35,
+        "db_to_ws_pcs_price":  13.21,
+        "db_to_retail_pcs_price":  13.58
+    },
+    {
+        "category":  "Nonie Talc",
+        "code":  "BCMF050",
+        "item_name":  "MINT FRESH COOL TALC-50 GM",
+        "mrp":  35,
+        "pcs_ctn":  288,
+        "Purc_price":  12.35,
+        "db_to_ws_pcs_price":  13.21,
+        "db_to_retail_pcs_price":  13.58
+    },
+    {
+        "category":  "ROSE WATER",
+        "code":  "BCRW030",
+        "item_name":  "ROSE WATER-30 ML",
+        "mrp":  10,
+        "pcs_ctn":  576,
+        "Purc_price":  5.85,
+        "db_to_ws_pcs_price":  6.26,
+        "db_to_retail_pcs_price":  6.44
+    },
+    {
+        "category":  "ROSE WATER",
+        "code":  "BCRW060",
+        "item_name":  "ROSE WATER-60 ML",
+        "mrp":  25,
+        "pcs_ctn":  240,
+        "Purc_price":  9.83,
+        "db_to_ws_pcs_price":  10.51,
+        "db_to_retail_pcs_price":  10.81
+    },
+    {
+        "category":  "ROSE WATER",
+        "code":  "BCRW120",
+        "item_name":  "ROSE WATER-120 ML",
+        "mrp":  50,
+        "pcs_ctn":  120,
+        "Purc_price":  17.3,
+        "db_to_ws_pcs_price":  18.51,
+        "db_to_retail_pcs_price":  19.03
+    },
+    {
+        "category":  "ROSE WATER",
+        "code":  "BCRW250",
+        "item_name":  "ROSE WATER-250 ML",
+        "mrp":  90,
+        "pcs_ctn":  72,
+        "Purc_price":  32.72,
+        "db_to_ws_pcs_price":  35.01,
+        "db_to_retail_pcs_price":  35.99
+    },
+    {
+        "category":  "Cream",
+        "code":  "BCCM050",
+        "item_name":  "ALMOND COLD CREAM-50 ML",
+        "mrp":  50,
+        "pcs_ctn":  216,
+        "Purc_price":  16.7,
+        "db_to_ws_pcs_price":  17.87,
+        "db_to_retail_pcs_price":  18.37
+    },
+    {
+        "category":  "Cream",
+        "code":  "BCCM500",
+        "item_name":  "ALMOND COLD CREAM-500 ML",
+        "mrp":  300,
+        "pcs_ctn":  24,
+        "Purc_price":  111.32,
+        "db_to_ws_pcs_price":  119.12,
+        "db_to_retail_pcs_price":  122.45
+    },
+    {
+        "category":  "Cream",
+        "code":  "BCCM800",
+        "item_name":  "ALMOND COLD CREAM-800 ML",
+        "mrp":  420,
+        "pcs_ctn":  12,
+        "Purc_price":  162.35,
+        "db_to_ws_pcs_price":  173.71,
+        "db_to_retail_pcs_price":  178.58
+    },
+    {
+        "category":  "Cream",
+        "code":  "BCFM050",
+        "item_name":  "MIX FRUIT COLD CREAM-50 ML",
+        "mrp":  50,
+        "pcs_ctn":  216,
+        "Purc_price":  16.7,
+        "db_to_ws_pcs_price":  17.87,
+        "db_to_retail_pcs_price":  18.37
+    },
+    {
+        "category":  "Cream",
+        "code":  "BCFM500",
+        "item_name":  "MIX FRUIT COLD CREAM-500 ML",
+        "mrp":  300,
+        "pcs_ctn":  24,
+        "Purc_price":  111.32,
+        "db_to_ws_pcs_price":  119.12,
+        "db_to_retail_pcs_price":  122.45
+    },
+    {
+        "category":  "Cream",
+        "code":  "BCFM800",
+        "item_name":  "MIX FRUIT COLD CREAM-800 ML",
+        "mrp":  420,
+        "pcs_ctn":  12,
+        "Purc_price":  162.35,
+        "db_to_ws_pcs_price":  173.71,
+        "db_to_retail_pcs_price":  178.58
+    }
 ]
