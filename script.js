@@ -17,12 +17,18 @@ const sendWhatsAppBtn = document.getElementById("sendWhatsAppBtn");
 const clearBtn = document.getElementById("clearBtn");
 const customerNameInput = document.getElementById("customerName");
 const priceTypeSelect = document.getElementById("priceType");
+const passwordInput = document.getElementById("passwordInput");
+const passwordSubmit = document.getElementById("passwordSubmit");
+const passwordError = document.getElementById("passwordError");
+const passwordScreen = document.getElementById("passwordScreen");
+const appContainer = document.getElementById("appContainer");
 
 const round2 = (num) => Math.round(num * 100) / 100;
 const toNumber = (val) => {
   const n = Number(val);
   return Number.isFinite(n) ? n : null;
 };
+let appUnlocked = false;
 
 // items.json se data load karo
 async function loadProducts() {
@@ -65,6 +71,23 @@ async function loadProducts() {
     console.error("items.json load nahi hua:", err);
     alert("Items load nahi ho rahe. Browser console check karo.");
     itemSelect.innerHTML = '<option value="">Error loading items</option>';
+  }
+}
+
+// password gate
+function attemptUnlock() {
+  if (appUnlocked) return;
+  const val = (passwordInput.value || "").trim();
+  if (val === "9977") {
+    appUnlocked = true;
+    passwordError.textContent = "";
+    passwordScreen.style.display = "none";
+    appContainer.style.display = "block";
+    loadProducts();
+  } else {
+    passwordError.textContent = "Galat password. Dobara try karo.";
+    passwordInput.focus();
+    passwordInput.select();
   }
 }
 
@@ -235,6 +258,18 @@ addItemBtn.addEventListener("click", addItem);
 sendWhatsAppBtn.addEventListener("click", sendToWhatsApp);
 clearBtn.addEventListener("click", clearOrder);
 priceTypeSelect.addEventListener("change", changePriceType);
+passwordSubmit.addEventListener("click", attemptUnlock);
+passwordInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    attemptUnlock();
+  }
+});
 
 // shuru me products load
-loadProducts();
+if (passwordInput) {
+  passwordInput.focus();
+} else {
+  // fallback agar password screen nahi mila to direct load
+  loadProducts();
+}

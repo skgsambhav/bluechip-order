@@ -7,7 +7,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
+<div id="passwordScreen" class="container">
+  <h2>Enter Password</h2>
+  <input type="password" id="passwordInput" placeholder="Password" />
+  <button id="passwordSubmit" class="btn-primary">Unlock</button>
+  <p id="passwordError" style="color:#c00; margin-top:8px;"></p>
+</div>
+
+<div class="container" id="appContainer" style="display:none;">
   <h1>Gopal Marketing - Bluechip Order System</h1>
 
   <!-- Customer Name -->
@@ -17,7 +24,6 @@
   <!-- Price Type Selection -->
   <label for="priceType">Select Price Type *</label>
   <select id="priceType">
-    <option value="priceBulk">DB to BULK 5% (inc GST)</option>
     <option value="priceWholesale" selected>DB to WS 7% (inc GST)</option>
     <option value="priceRetail">DB to Retail 10% (inc GST)</option>
   </select>
@@ -34,14 +40,14 @@
       <input type="text" id="qtyInput" placeholder="e.g. 10 or 2 CTN" value="1">
     </div>
     <div>
-      <label for="salePriceInput">Your Sale Price (Rs.) - Optional</label>
+      <label for="salePriceInput">Custom Sale price</label>
       <input type="number" id="salePriceInput" placeholder="Leave empty for dealer price" step="0.01" min="0">
     </div>
   </div>
 
   <div class="price-box">
-    <div>Cost Rate: Rs.<span id="itemPrice">0</span></div>
-    <div>Your Sale Price: Rs.<span id="salePrice">0</span></div>
+    <div>PP: Rs.<span id="itemPrice">0</span></div>
+    <div>Custom Sale Price: Rs.<span id="salePrice">0</span></div>
     <div>Margin: <span id="marginPercent">0</span>%</div>
   </div>
 
