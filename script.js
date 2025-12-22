@@ -250,9 +250,13 @@ Quote Price: Rs.${finalSalePrice.toFixed(2)}`;
   orderTextArea.value += itemBlock;
 
   // Reset inputs
+  itemSearch.value = "";
+  selectedItemCode.value = "";
   qtyInput.value = "1";
   salePriceInput.value = "";
+  searchResults.style.display = "none";
   updateLineTotal();
+  itemSearch.focus();
 }
 
 // WhatsApp pe bhejna
