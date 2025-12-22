@@ -28,11 +28,13 @@
     <option value="priceRetail">DB to Retail 10% (inc GST)</option>
   </select>
 
-  <!-- Item select -->
-  <label for="itemSelect">Item choose karo</label>
-  <select id="itemSelect">
-    <option value="">-- Items loading... --</option>
-  </select>
+  <!-- Item search -->
+  <label for="itemSearch">Item search karo (type karein)</label>
+  <div class="search-container">
+    <input type="text" id="itemSearch" placeholder="Item ka naam ya code type karo..." autocomplete="off">
+    <div id="searchResults" class="search-results"></div>
+  </div>
+  <input type="hidden" id="selectedItemCode">
 
   <div class="row">
     <div>
