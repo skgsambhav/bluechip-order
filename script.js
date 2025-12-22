@@ -5,7 +5,9 @@ const OWNER_WHATSAPP_NUMBER = "919977414177"; // <-- yahan apna number
 let PRODUCTS = [];
 let currentPriceType = "priceWholesale"; // default
 
-const itemSelect = document.getElementById("itemSelect");
+const itemSearch = document.getElementById("itemSearch");
+const searchResults = document.getElementById("searchResults");
+const selectedItemCode = document.getElementById("selectedItemCode");
 const qtyInput = document.getElementById("qtyInput");
 const salePriceInput = document.getElementById("salePriceInput");
 const itemPriceSpan = document.getElementById("itemPrice");
@@ -66,11 +68,11 @@ async function loadProducts() {
       };
     });
     console.log(`Loaded ${PRODUCTS.length} products`);
-    fillDropdown();
+    itemSearch.placeholder = `${PRODUCTS.length} items available - Type to search...`;
   } catch (err) {
     console.error("items.json load nahi hua:", err);
     alert("Items load nahi ho rahe. Browser console check karo.");
-    itemSelect.innerHTML = '<option value="">Error loading items</option>';
+    itemSearch.placeholder = "Error loading items";
   }
 }
 
@@ -91,27 +93,72 @@ function attemptUnlock() {
   }
 }
 
-// dropdown me options daalna
-function fillDropdown() {
-  console.log(`Filling dropdown with ${PRODUCTS.length} products`);
-  itemSelect.innerHTML = '<option value="">-- Item select karein --</option>';
-  PRODUCTS.forEach((p) => {
-    const opt = document.createElement("option");
-    opt.value = p.code;
+// Search products based on query
+function searchProducts(query) {
+  if (!query || query.trim() === "") {
+    return [];
+  }
+
+  const searchTerm = query.toLowerCase().trim();
+  const filtered = PRODUCTS.filter((p) => {
+    const name = (p.name || "").toLowerCase();
+    const code = (p.code || "").toLowerCase();
+    return name.includes(searchTerm) || code.includes(searchTerm);
+  });
+
+  // Limit to 10 results
+  return filtered.slice(0, 10);
+}
+
+// Display search results
+function displaySearchResults(results) {
+  if (results.length === 0) {
+    searchResults.innerHTML = '<div class="search-item no-results">Koi item nahi mila</div>';
+    searchResults.style.display = "block";
+    return;
+  }
+
+  searchResults.innerHTML = "";
+  results.forEach((p) => {
+    const div = document.createElement("div");
+    div.className = "search-item";
+    div.dataset.code = p.code;
+
     const price = p[currentPriceType];
     const priceLabel =
       typeof price === "number" && !Number.isNaN(price)
         ? price.toFixed(2)
         : "N/A";
-    opt.textContent = `${p.name} (Rs.${priceLabel})`;
-    itemSelect.appendChild(opt);
+
+    div.innerHTML = `
+      <div class="item-name">${p.name}</div>
+      <div class="item-details">Code: ${p.code} | Rs.${priceLabel}</div>
+    `;
+
+    div.addEventListener("click", () => selectItem(p));
+    searchResults.appendChild(div);
   });
-  console.log("Dropdown filled successfully");
+
+  searchResults.style.display = "block";
+}
+
+// Select an item
+function selectItem(product) {
+  selectedItemCode.value = product.code;
+  const price = product[currentPriceType];
+  const priceLabel =
+    typeof price === "number" && !Number.isNaN(price)
+      ? price.toFixed(2)
+      : "N/A";
+  itemSearch.value = `${product.name} (Rs.${priceLabel})`;
+  searchResults.style.display = "none";
+  updateLineTotal();
+  qtyInput.focus();
 }
 
 // selected product nikaalo
 function getSelectedProduct() {
-  const code = itemSelect.value;
+  const code = selectedItemCode.value;
   return PRODUCTS.find((p) => p.code === code);
 }
 
@@ -247,12 +294,44 @@ function clearOrder() {
 // price type change handler
 function changePriceType() {
   currentPriceType = priceTypeSelect.value;
-  fillDropdown();
+  // Clear selected item when price type changes
+  selectedItemCode.value = "";
+  itemSearch.value = "";
+  searchResults.style.display = "none";
   updateLineTotal();
 }
 
 // event listeners
-itemSelect.addEventListener("change", updateLineTotal);
+itemSearch.addEventListener("input", (e) => {
+  const query = e.target.value;
+  if (query.trim() === "") {
+    searchResults.style.display = "none";
+    selectedItemCode.value = "";
+    updateLineTotal();
+    return;
+  }
+
+  const results = searchProducts(query);
+  displaySearchResults(results);
+});
+
+// Close search results when clicking outside
+document.addEventListener("click", (e) => {
+  if (
+    !searchResults.contains(e.target) &&
+    e.target !== itemSearch
+  ) {
+    searchResults.style.display = "none";
+  }
+});
+
+// Handle keyboard navigation in search
+itemSearch.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    searchResults.style.display = "none";
+  }
+});
+
 salePriceInput.addEventListener("input", updateLineTotal);
 addItemBtn.addEventListener("click", addItem);
 sendWhatsAppBtn.addEventListener("click", sendToWhatsApp);
