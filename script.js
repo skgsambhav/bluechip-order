@@ -83,7 +83,7 @@ async function loadProducts() {
 function attemptUnlock() {
   if (appUnlocked) return;
   const val = (passwordInput.value || "").trim();
-  if (val === "9977") {
+  if (val === "3511") {
     appUnlocked = true;
     passwordError.textContent = "";
     passwordScreen.style.display = "none";
