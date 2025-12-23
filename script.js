@@ -264,7 +264,7 @@ Quote Price: Rs.${finalSalePrice.toFixed(2)}`;
   itemSearch.focus();
 }
 
-// WhatsApp pe bhejna (Send to Dealer - Full details)
+// WhatsApp pe bhejna (Send to Dealer - Full details) - Fixed dealer number only
 function sendToWhatsApp() {
   const customerName = customerNameInput.value.trim();
   if (!customerName) {
@@ -306,6 +306,13 @@ function sendToCustomer() {
   const text = orderTextArea.value.trim();
   if (!text) {
     alert("Koi item add nahi hai.");
+    return;
+  }
+
+  // Ask user for WhatsApp number
+  const phoneNumber = prompt("WhatsApp number enter karo (country code ke saath, bina + ke):\nExample: 919876543210");
+  if (!phoneNumber || phoneNumber.trim() === "") {
+    alert("Phone number zaruri hai.");
     return;
   }
 
@@ -357,7 +364,7 @@ function sendToCustomer() {
   }
 
   const encoded = encodeURIComponent(customerText);
-  const url = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encoded}`;
+  const url = `https://wa.me/${phoneNumber.trim()}?text=${encoded}`;
   window.open(url, "_blank");
 }
 
@@ -373,6 +380,13 @@ function createOrder() {
   const text = orderTextArea.value.trim();
   if (!text) {
     alert("Koi item add nahi hai.");
+    return;
+  }
+
+  // Ask user for WhatsApp number
+  const phoneNumber = prompt("WhatsApp number enter karo (country code ke saath, bina + ke):\nExample: 919876543210");
+  if (!phoneNumber || phoneNumber.trim() === "") {
+    alert("Phone number zaruri hai.");
     return;
   }
 
@@ -419,7 +433,7 @@ function createOrder() {
   }
 
   const encoded = encodeURIComponent(orderText);
-  const url = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encoded}`;
+  const url = `https://wa.me/${phoneNumber.trim()}?text=${encoded}`;
   window.open(url, "_blank");
 }
 
