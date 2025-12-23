@@ -279,7 +279,7 @@ function sendToWhatsApp() {
     return;
   }
 
-  let finalText = "Bluechip Order\n";
+  let finalText = "Mehta Cosmetics Order\n";
   finalText += `Customer: ${customerName}\n`;
 
   // Price type display
@@ -306,13 +306,6 @@ function sendToCustomer() {
   const text = orderTextArea.value.trim();
   if (!text) {
     alert("Koi item add nahi hai.");
-    return;
-  }
-
-  // Ask user for WhatsApp number
-  const phoneNumber = prompt("WhatsApp number enter karo (country code ke saath, bina + ke):\nExample: 919876543210");
-  if (!phoneNumber || phoneNumber.trim() === "") {
-    alert("Phone number zaruri hai.");
     return;
   }
 
@@ -364,7 +357,7 @@ function sendToCustomer() {
   }
 
   const encoded = encodeURIComponent(customerText);
-  const url = `https://wa.me/${phoneNumber.trim()}?text=${encoded}`;
+  const url = `https://wa.me/?text=${encoded}`;
   window.open(url, "_blank");
 }
 
@@ -380,13 +373,6 @@ function createOrder() {
   const text = orderTextArea.value.trim();
   if (!text) {
     alert("Koi item add nahi hai.");
-    return;
-  }
-
-  // Ask user for WhatsApp number
-  const phoneNumber = prompt("WhatsApp number enter karo (country code ke saath, bina + ke):\nExample: 919876543210");
-  if (!phoneNumber || phoneNumber.trim() === "") {
-    alert("Phone number zaruri hai.");
     return;
   }
 
@@ -433,7 +419,7 @@ function createOrder() {
   }
 
   const encoded = encodeURIComponent(orderText);
-  const url = `https://wa.me/${phoneNumber.trim()}?text=${encoded}`;
+  const url = `https://wa.me/?text=${encoded}`;
   window.open(url, "_blank");
 }
 
