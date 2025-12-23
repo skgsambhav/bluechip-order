@@ -16,6 +16,8 @@ const marginPercentSpan = document.getElementById("marginPercent");
 const orderTextArea = document.getElementById("orderText");
 const addItemBtn = document.getElementById("addItemBtn");
 const sendWhatsAppBtn = document.getElementById("sendWhatsAppBtn");
+const sendCustomerBtn = document.getElementById("sendCustomerBtn");
+const createOrderBtn = document.getElementById("createOrderBtn");
 const clearBtn = document.getElementById("clearBtn");
 const customerNameInput = document.getElementById("customerName");
 const priceTypeSelect = document.getElementById("priceType");
@@ -59,6 +61,7 @@ async function loadProducts() {
       return {
         code: item.code,
         name: item.item_name || item.name || item.code,
+        category: item.category || "",
         mrp: toNumber(item.mrp) ?? 0,
         itemSize: item.pcs_ctn ? `${item.pcs_ctn} pcs/ctn` : "",
         pp: purchasePrice,
@@ -93,7 +96,7 @@ function attemptUnlock() {
   }
 }
 
-// Search products based on query
+// Search products based on query (Advanced search with category)
 function searchProducts(query) {
   if (!query || query.trim() === "") {
     return [];
@@ -103,7 +106,8 @@ function searchProducts(query) {
   const filtered = PRODUCTS.filter((p) => {
     const name = (p.name || "").toLowerCase();
     const code = (p.code || "").toLowerCase();
-    return name.includes(searchTerm) || code.includes(searchTerm);
+    const category = (p.category || "").toLowerCase();
+    return name.includes(searchTerm) || code.includes(searchTerm) || category.includes(searchTerm);
   });
 
   // Limit to 10 results
@@ -132,7 +136,7 @@ function displaySearchResults(results) {
 
     div.innerHTML = `
       <div class="item-name">${p.name}</div>
-      <div class="item-details">Code: ${p.code} | Rs.${priceLabel}</div>
+      <div class="item-details">Category: ${p.category} | Code: ${p.code} | Rs.${priceLabel}</div>
     `;
 
     div.addEventListener("click", () => selectItem(p));
@@ -240,6 +244,7 @@ function addItem() {
 
   // Multi-line format for each item
   const itemBlock = `${product.name}
+Category: ${product.category}
 MRP: Rs.${product.mrp} | Size: ${product.itemSize}
 Order Qty: ${qty} | Margin: ${margin.toFixed(2)}%
 Quote Price: Rs.${finalSalePrice.toFixed(2)}`;
@@ -259,7 +264,7 @@ Quote Price: Rs.${finalSalePrice.toFixed(2)}`;
   itemSearch.focus();
 }
 
-// WhatsApp pe bhejna
+// WhatsApp pe bhejna (Send to Dealer - Full details)
 function sendToWhatsApp() {
   const customerName = customerNameInput.value.trim();
   if (!customerName) {
@@ -285,6 +290,135 @@ function sendToWhatsApp() {
   finalText += text;
 
   const encoded = encodeURIComponent(finalText);
+  const url = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encoded}`;
+  window.open(url, "_blank");
+}
+
+// Send to Customer - Limited info (Item name, Quote price, Order qty)
+function sendToCustomer() {
+  const customerName = customerNameInput.value.trim();
+  if (!customerName) {
+    alert("Customer Name zaruri hai.");
+    customerNameInput.focus();
+    return;
+  }
+
+  const text = orderTextArea.value.trim();
+  if (!text) {
+    alert("Koi item add nahi hai.");
+    return;
+  }
+
+  // Parse order details and extract only item name, quote price, and order qty
+  const lines = text.split("\n");
+  let customerText = "Order Details\n";
+  customerText += `Customer: ${customerName}\n`;
+  customerText += "========================\n\n";
+
+  let currentItem = "";
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+
+    // Skip separator lines
+    if (line.startsWith("---")) {
+      if (currentItem) {
+        customerText += currentItem + "\n------------------------\n";
+        currentItem = "";
+      }
+      continue;
+    }
+
+    // Item name (first line of each block, not starting with known prefixes)
+    if (line && !line.startsWith("Category:") && !line.startsWith("MRP:") &&
+        !line.startsWith("Order Qty:") && !line.startsWith("Quote Price:")) {
+      if (currentItem) {
+        customerText += currentItem + "\n------------------------\n";
+      }
+      currentItem = line + "\n";
+    }
+
+    // Extract Order Qty
+    if (line.startsWith("Order Qty:")) {
+      const qtyMatch = line.match(/Order Qty:\s*([^|]+)/);
+      if (qtyMatch) {
+        currentItem += `Order Qty: ${qtyMatch[1].trim()}\n`;
+      }
+    }
+
+    // Extract Quote Price
+    if (line.startsWith("Quote Price:")) {
+      currentItem += line + "\n";
+    }
+  }
+
+  // Add last item
+  if (currentItem) {
+    customerText += currentItem;
+  }
+
+  const encoded = encodeURIComponent(customerText);
+  const url = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encoded}`;
+  window.open(url, "_blank");
+}
+
+// Create Order - Minimal info (Order name/item name, Order qty only)
+function createOrder() {
+  const customerName = customerNameInput.value.trim();
+  if (!customerName) {
+    alert("Customer Name zaruri hai.");
+    customerNameInput.focus();
+    return;
+  }
+
+  const text = orderTextArea.value.trim();
+  if (!text) {
+    alert("Koi item add nahi hai.");
+    return;
+  }
+
+  // Parse order details and extract only item name and order qty
+  const lines = text.split("\n");
+  let orderText = "Create Order\n";
+  orderText += `Customer: ${customerName}\n`;
+  orderText += "========================\n\n";
+
+  let currentItem = "";
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+
+    // Skip separator lines
+    if (line.startsWith("---")) {
+      if (currentItem) {
+        orderText += currentItem + "\n------------------------\n";
+        currentItem = "";
+      }
+      continue;
+    }
+
+    // Item name (first line of each block, not starting with known prefixes)
+    if (line && !line.startsWith("Category:") && !line.startsWith("MRP:") &&
+        !line.startsWith("Order Qty:") && !line.startsWith("Quote Price:")) {
+      if (currentItem) {
+        orderText += currentItem + "\n------------------------\n";
+      }
+      currentItem = line + "\n";
+    }
+
+    // Extract Order Qty only
+    if (line.startsWith("Order Qty:")) {
+      const qtyMatch = line.match(/Order Qty:\s*([^|]+)/);
+      if (qtyMatch) {
+        currentItem += `Order Qty: ${qtyMatch[1].trim()}\n`;
+      }
+    }
+  }
+
+  // Add last item
+  if (currentItem) {
+    orderText += currentItem;
+  }
+
+  const encoded = encodeURIComponent(orderText);
   const url = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encoded}`;
   window.open(url, "_blank");
 }
@@ -339,6 +473,8 @@ itemSearch.addEventListener("keydown", (e) => {
 salePriceInput.addEventListener("input", updateLineTotal);
 addItemBtn.addEventListener("click", addItem);
 sendWhatsAppBtn.addEventListener("click", sendToWhatsApp);
+sendCustomerBtn.addEventListener("click", sendToCustomer);
+createOrderBtn.addEventListener("click", createOrder);
 clearBtn.addEventListener("click", clearOrder);
 priceTypeSelect.addEventListener("change", changePriceType);
 passwordSubmit.addEventListener("click", attemptUnlock);
